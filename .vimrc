@@ -8,27 +8,30 @@ set expandtab       " tabs are space
 
 let mapleader = "\\"
 
-nnoremap <Leader>q :q<CR>
-nnoremap <Leader>w :w<CR>
+nnoremap <silent> <Leader>q :q<CR>
+nnoremap <silent> <Leader>w :w<CR>
 
 " fugitive maps
-nnoremap <Leader>gs :Gstatus<CR>
-nnoremap <Leader>gb :Gblame<CR>
-nnoremap <Leader>gc :Gcommit<CR>
-nnoremap <Leader>gd :Gdiff<CR>
-nnoremap <Leader>gl :Glog<CR>
+nnoremap <silent> <Leader>gs :Gstatus<CR>
+nnoremap <silent> <Leader>gb :Gblame<CR>
+nnoremap <silent> <Leader>gc :Gcommit<CR>
+nnoremap <silent> <Leader>gd :Gdiff<CR>
+nnoremap <silent> <Leader>gl :Glog<CR>
 
 " Tab navigation
-nnoremap - :tabprev<CR>
-nnoremap = :tabnext<CR>
+nnoremap <silent> - :tabprev<CR>
+nnoremap <silent> = :tabnext<CR>
 nnoremap <Leader>nt :tabnew<CR>
+
+" buffer
+nnoremap <silent> <Leader>bd :bd<CR>
 
 " denite
 "   ;         - Browser currently directory and open buffers
 "   <leader>g - Search current directory for occurences of given term and
 "   close window if no results
 "   <leader>j - Search current directory for occurences of word under cursor
-nmap <silent>; :Denite file/rec buffer<CR>
+nmap <silent>; :Denite file/rec -split=floating -winrow=1<CR>
 nnoremap <silent> <Leader>g :<C-u>Denite grep:. -no-empty -mode=normal<CR>
 nnoremap <silent> <Leader>j :<C-u>DeniteCursorWord grep:. -mode=normal<CR>
 
@@ -66,9 +69,24 @@ Plug 'tpope/vim-fugitive'
 call plug#end()
 
 " denite key mappings
+" call denite#custom#var('file/rec', 'command', ['rg', '--files', '--glob', '!.git'])
 call denite#custom#map('insert', '<C-j>', '<denite:move_to_next_line>', 'noremap')
 call denite#custom#map('insert', '<C-k>', '<denite:move_to_previous_line>', 'noremap')
 
+" Use ripgrep in place of "grep"
+call denite#custom#var('grep', 'command', ['rg'])
+" Custom options for ripgrep
+"   --vimgrep:  Show results with every match on it's own line
+"   --hidden:   Search hidden directories and files
+"   --heading:  Show the file name above clusters of matches from each file
+"   --S:        Search case insensitively if the pattern is all lowercase
+call denite#custom#var('grep', 'default_opts', ['--hidden', '--vimgrep', '--heading', '-S'])
+
+" Recommended defaults for ripgrep via Denite docs
+call denite#custom#var('grep', 'recursive_opts', [])
+call denite#custom#var('grep', 'pattern_opt', ['--regexp'])
+call denite#custom#var('grep', 'separator', ['--'])
+call denite#custom#var('grep', 'final_opts', [])
+
 " coc prettier
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
-
