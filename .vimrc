@@ -56,33 +56,23 @@ Plug 'vim-airline/vim-airline'
 let g:airline#extensions#tabline#formatter = 'default'
 
 Plug 'mhinz/vim-signify'
-Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
+Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
 
-Plug 'HerringtonDarkholme/yats.vim'
-" Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
-" For Denite features
 Plug 'Shougo/denite.nvim'
 let g:deoplete#enable_at_startup = 1
 
+Plug 'HerringtonDarkholme/yats.vim'
 Plug 'tpope/vim-fugitive'
 
 call plug#end()
 
 " denite key mappings
-" call denite#custom#var('file/rec', 'command', ['rg', '--files', '--glob', '!.git'])
-call denite#custom#map('insert', '<C-j>', '<denite:move_to_next_line>', 'noremap')
-call denite#custom#map('insert', '<C-k>', '<denite:move_to_previous_line>', 'noremap')
+call denite#custom#map('insert', '<C-n>', '<denite:move_to_next_line>', 'noremap')
+call denite#custom#map('insert', '<C-p>', '<denite:move_to_previous_line>', 'noremap')
 
-" Use ripgrep in place of "grep"
+call denite#custom#var('file/rec', 'command', ['rg', '--files', '--vimgrep'])
 call denite#custom#var('grep', 'command', ['rg'])
-" Custom options for ripgrep
-"   --vimgrep:  Show results with every match on it's own line
-"   --hidden:   Search hidden directories and files
-"   --heading:  Show the file name above clusters of matches from each file
-"   --S:        Search case insensitively if the pattern is all lowercase
-call denite#custom#var('grep', 'default_opts', ['--hidden', '--vimgrep', '--heading', '-S'])
-
-" Recommended defaults for ripgrep via Denite docs
+call denite#custom#var('grep', 'default_opts', ['-i', '--vimgrep', '--no-heading'])
 call denite#custom#var('grep', 'recursive_opts', [])
 call denite#custom#var('grep', 'pattern_opt', ['--regexp'])
 call denite#custom#var('grep', 'separator', ['--'])
