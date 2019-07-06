@@ -3,6 +3,7 @@
 alias nv="nvim"
 alias bu="~/repos/dotfiles/bu.sh"
 
+export REPO_DIR="~/repos/dotfiles/"
 # tmuxinator
 
 autoload -Uz compinit
