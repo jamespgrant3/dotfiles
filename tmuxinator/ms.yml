@@ -3,15 +3,12 @@ name: ms
 root: ~/repos/clients/mustardseed/
 
 windows:
-  - code:
-      layout: even-horizontal
-      panes:
-        - api:
-          - cd perdiem-watch-firebase
-          - nv
-        - client:
-          - cd perdiem-watch-client
-          - nv
+  - api:
+    - cd perdiem-watch-firebase
+    - nv
+  - client:
+    - cd perdiem-watch-client
+    - nv
   - bash:
   - servers:
       layout: even-horizontal

@@ -44,6 +44,7 @@ nnoremap <C-h> <C-w><C-h>
 " Tab navigation
 nnoremap - :tabprev<CR>
 nnoremap = :tabnext<CR><Paste>
+nnoremap <silent> <Leader>nt :tabnew<CR>
 
 autocmd FileType typescript nmap <buffer> <Leader>r :TSRefs<CR>
 autocmd FileType typescript nmap <buffer> <Leader>e :TSRename<CR>

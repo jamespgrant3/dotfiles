@@ -3,7 +3,9 @@
 alias nv="nvim"
 alias bu="~/repos/dotfiles/bu.sh"
 
-export REPO_DIR="~/repos/dotfiles/"
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 # tmuxinator
 
 autoload -Uz compinit
@@ -14,7 +16,7 @@ source ~/.bin/tmuxinator.zsh
 export EDITOR="nvim"
 
 # end tmuxinator
-export PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/2.6.0/gems/tmuxinator-1.1.1/bin:$PATH"
+export PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/2.6.0/gems/tmuxinator-1.1.1/bin:~/.nvm/bash_completion/:$PATH"
 
  # Use ag for FZF and have it respect .gitignore.
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
