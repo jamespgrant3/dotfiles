@@ -1,4 +1,5 @@
 alias nv="nvim"
+alias bu="~/repos/dotfiles/bu.sh"
 alias cls="clear"
 alias ds="find . -name \".DS_Store\" -delete"
 alias gf="git fetch"

@@ -1,19 +1,17 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-alias nv="nvim"
-alias bu="~/repos/dotfiles/bu.sh"
+source ~/.bash_profile
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 # tmuxinator
 
+export EDITOR="nvim"
 autoload -Uz compinit
 compinit
 
 source ~/.bin/tmuxinator.zsh
-
-export EDITOR="nvim"
 
 # end tmuxinator
 export PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/2.6.0/gems/tmuxinator-1.1.1/bin:~/.nvm/bash_completion/:$PATH"
