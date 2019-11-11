@@ -1,12 +1,15 @@
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
 source ~/.bash_profile
+alias nv="nvim"
+alias redo="docker-compose down && docker-compose -f docker-compose-db.yml up -d && NODE_ENV=local npm run api:debug"
+alias db="docker-compose -f docker-compose-db.yml up -d"
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+#\TMPDIR=/private$TMPDIR
+#alias runls="PORT_WEB_UI=9090 LAMBDA_EXECUTOR=docker-reuse LAMBDA_REMOTE_DOCKER=false SERVICES=lambda TMPDIR=/private$TMPDIR docker-compose up"
+
+alias runls="TMPDIR=/private$TMPDIR docker-compose up"
+alias invoke="awslocal lambda invoke --function-name mylambda --payload '{\"key\": \"value\"}'  ./lambda.out"
+
 # tmuxinator
-
 export EDITOR="nvim"
 autoload -Uz compinit
 compinit
@@ -14,13 +17,11 @@ compinit
 source ~/.bin/tmuxinator.zsh
 
 # end tmuxinator
-export PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/2.6.0/gems/tmuxinator-1.1.1/bin:~/.nvm/bash_completion/:$PATH"
 
- # Use ag for FZF and have it respect .gitignore.
-export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
+export PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/2.6.0/gems/tmuxinator-1.1.1/bin:/Users/sgc700/Library/Python/2.7/bin:/Users/sgc700/Documents:$PATH"
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/jamesgrant/.oh-my-zsh"
+export ZSH="/Users/sgc700/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -115,3 +116,5 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
