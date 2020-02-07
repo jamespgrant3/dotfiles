@@ -13,6 +13,10 @@ set rtp+=~/.fzf
 nnoremap <silent> <Leader>q :q<CR>
 nnoremap <silent> <Leader>w :w<CR>
 
+" organize imports
+command! -nargs=0 OR :call CocAction('runCommand', 'editor.action.organizeImport')
+autocmd BufWritePre *.ts :OR
+
 " fugitive maps
 nnoremap <silent> <Leader>gs :Gstatus<CR>
 nnoremap <silent> <Leader>gb :Gblame<CR>
@@ -56,6 +60,7 @@ set dir=$HOME/.vim/tmp/swap
 
 call plug#begin('~/.vim/plugged')
 
+Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'hashivim/vim-terraform'
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 
