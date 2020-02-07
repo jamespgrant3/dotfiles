@@ -7,6 +7,8 @@ alias gr="git rebase"
 alias gbd="git branch -D"
 alias gc="git checkout"
 alias gcb="git checkout -b"
+# see list of used ports for pid
+alias ports="lsof -i -n -P | grep TCP"
 
 source ~/.bin/tmuxinator.bash
 
