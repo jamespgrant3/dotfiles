@@ -80,6 +80,8 @@ call plug#end()
 nmap <silent> <leader>f :NERDTreeFind<CR>
 " show hidden/dotfiles
 let NERDTreeShowHidden=1
+" close after opening a file
+let NERDTreeQuitOnOpen=1
 map <C-n> :NERDTreeToggle<CR>
 
 let g:airline#extensions#tabline#formatter = 'default'
