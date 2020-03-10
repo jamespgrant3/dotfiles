@@ -8,7 +8,7 @@
     "coc-json": "^1.2.5",
     "coc-prettier": "^1.1.11",
     "coc-snippets": "^2.1.21",
-    "coc-tsserver": "1.4.9",
+    "coc-tsserver": ">=1.4.11",
     "coc-yaml": "^1.0.4",
     "coc-yank": "^1.1.3"
   }

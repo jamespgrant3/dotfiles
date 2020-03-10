@@ -1,5 +1,4 @@
 syntax on
-" colorscheme dracula
 set number relativenumber
 set tabstop=2       " number of visual spaces per TAB
 set softtabstop=2   " number of spaces in tab when editing
@@ -11,6 +10,21 @@ set hidden
 set rtp+=~/.fzf
 
 let mapleader = "\\"
+
+call plug#begin('~/.vim/plugged')
+
+Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'hashivim/vim-terraform'
+Plug 'Shougo/vimproc.vim', {'do' : 'make'}
+Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'vim-airline/vim-airline'
+Plug 'mhinz/vim-signify'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'tpope/vim-fugitive'
+
+call plug#end()
 
 nnoremap <silent> <leader>q :q<CR>
 nnoremap <silent> <leader>w :w<CR>
@@ -61,20 +75,6 @@ command! -nargs=0 OR :call CocAction('runCommand', 'editor.action.organizeImport
 nmap <silent> <leader>p :Prettier<CR>
 set dir=$HOME/.vim/tmp/swap
 
-call plug#begin('~/.vim/plugged')
-
-Plug 'hashivim/vim-terraform'
-Plug 'Shougo/vimproc.vim', {'do' : 'make'}
-Plug 'scrooloose/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'vim-airline/vim-airline'
-Plug 'mhinz/vim-signify'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'HerringtonDarkholme/yats.vim'
-Plug 'tpope/vim-fugitive'
-
-call plug#end()
-
 " nerdtree bindings
 " open file in nerdtree
 nmap <silent> <leader>f :NERDTreeFind<CR>
@@ -114,3 +114,4 @@ command! -nargs=0 Prettier :CocCommand prettier.formatFile
 " nnoremap <silent><leader>f :Prettier<CR>:w<CR>
 " coc.nvim config
 
+color dracula
