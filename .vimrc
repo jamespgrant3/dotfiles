@@ -8,12 +8,11 @@ set clipboard=unnamed
 set cmdheight=2
 set hidden
 set rtp+=~/.fzf
-
 let mapleader = "\\"
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'dracula/vim', {'as': 'dracula'}
 Plug 'hashivim/vim-terraform'
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'scrooloose/nerdtree'
@@ -38,6 +37,8 @@ nnoremap <silent> <leader>gc :Gcommit<CR>
 nnoremap <silent> <leader>gd :Gdiff<CR>
 nnoremap <silent> <leader>gl :Glog<CR>
 
+" coc-explorer
+nmap <silent> <space>e :CocCommand explorer<CR>
 
 " Tab navigation
 nnoremap <silent> - :tabprev<CR>
