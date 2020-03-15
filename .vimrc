@@ -22,9 +22,11 @@ Plug 'mhinz/vim-signify'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'tpope/vim-fugitive'
+Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
 
+nnoremap <silent> <leader>s :so %<CR>
 nnoremap <silent> <leader>q :q<CR>
 nnoremap <silent> <leader>w :w<CR>
 
