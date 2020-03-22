@@ -122,3 +122,6 @@ let g:bookmark_sign = '♥'
 let g:bookmark_auto_close = 1
 
 color dracula
+
+highlight BookmarkSign ctermbg=NONE ctermfg=141
+highlight BookmarkAnnotationSign ctermbg=NONE ctermfg=228
