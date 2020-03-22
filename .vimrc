@@ -26,8 +26,8 @@ Plug 'mhinz/vim-signify'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'tpope/vim-fugitive'
-Plug 'ryanoasis/vim-devicons'
 Plug 'MattesGroeger/vim-bookmarks'
+Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
 
