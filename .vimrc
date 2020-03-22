@@ -27,6 +27,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'ryanoasis/vim-devicons'
+Plug 'MattesGroeger/vim-bookmarks'
 
 call plug#end()
 
@@ -92,17 +93,16 @@ map <C-n> :NERDTreeToggle<CR>
 let g:airline#extensions#tabline#formatter = 'default'
 
 " better split navigation
-" nnoremap <C-j> <C-w><C-j>
-" nnoremap <C-k> <C-w><C-k>
-" nnoremap <C-l> <C-w><C-l>
-" nnoremap <C-h> <C-w><C-h>
+nnoremap <C-j> <C-w><C-j>
+nnoremap <C-k> <C-w><C-k>
+nnoremap <C-l> <C-w><C-l>
+nnoremap <C-h> <C-w><C-h>
 
 autocmd FileType typescript nmap <buffer> <leader>r :TSRefs<CR>
 autocmd FileType typescript nmap <buffer> <leader>e :TSRename<CR>
 autocmd FileType typescript nmap <buffer> <leader>i :TSImport<CR>
 autocmd FileType typescript nmap <buffer> <leader>t :TSType<CR>
 autocmd FileType typescript nmap <buffer> <C-]> :TSDefPreview<CR>
-
 
 " use tab/shift+tab to navigate autocomplete options.
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
@@ -116,5 +116,9 @@ set previewheight=25
 
 " coc-prettier
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
+
+" vim-bookmarks
+let g:bookmark_sign = '♥'
+let g:bookmark_auto_close = 1
 
 color dracula
