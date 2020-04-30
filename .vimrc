@@ -11,16 +11,20 @@ set hidden
 set rtp+=~/.fzf
 set splitbelow
 set splitright
+set ignorecase
+set autoread
+set noswapfile
 
 let mapleader = "\\"
+
+autocmd BufNewFile,BufRead *.md set filetype=markdown
+autocmd BufNewFile,BufRead *.tsx set filetype=typescript
 
 call plug#begin('~/.vim/plugged')
 
 Plug 'dracula/vim', {'as': 'dracula'}
 Plug 'hashivim/vim-terraform'
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
-Plug 'scrooloose/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'vim-airline/vim-airline'
 Plug 'mhinz/vim-signify'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -28,6 +32,7 @@ Plug 'HerringtonDarkholme/yats.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'MattesGroeger/vim-bookmarks'
 Plug 'ryanoasis/vim-devicons'
+Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
 
 call plug#end()
 
@@ -83,12 +88,12 @@ set dir=$HOME/.vim/tmp/swap
 
 " nerdtree bindings
 " open file in nerdtree
-nmap <silent> <leader>f :NERDTreeFind<CR>
+" nmap <silent> <leader>f :NERDTreeFind<CR>
 " show hidden/dotfiles
-let NERDTreeShowHidden=1
+" let NERDTreeShowHidden=1
 " close after opening a file
-let NERDTreeQuitOnOpen=1
-map <C-n> :NERDTreeToggle<CR>
+" let NERDTreeQuitOnOpen=1
+" map <C-n> :NERDTreeToggle<CR>
 
 let g:airline#extensions#tabline#formatter = 'default'
 
@@ -100,7 +105,7 @@ nnoremap <C-h> <C-w><C-h>
 
 autocmd FileType typescript nmap <buffer> <leader>r :TSRefs<CR>
 autocmd FileType typescript nmap <buffer> <leader>e :TSRename<CR>
-autocmd FileType typescript nmap <buffer> <leader>i :TSImport<CR>
+" autocmd FileType typescript nmap <buffer> <leader>i :TSImport<CR>
 autocmd FileType typescript nmap <buffer> <leader>t :TSType<CR>
 autocmd FileType typescript nmap <buffer> <C-]> :TSDefPreview<CR>
 
@@ -122,6 +127,13 @@ let g:bookmark_sign = '♥'
 let g:bookmark_auto_close = 1
 
 color dracula
+
+" folds
+" fold current function
+nnoremap z{ f{zfa}
+
+" markdown
+let g:instant_markdown_logfile = '~/.vim/tmp/swap/instant_markdown.log'
 
 highlight BookmarkSign ctermbg=NONE ctermfg=141
 highlight BookmarkAnnotationSign ctermbg=NONE ctermfg=228
