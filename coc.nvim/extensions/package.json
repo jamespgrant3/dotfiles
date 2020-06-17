@@ -1,15 +1,15 @@
 {
   "dependencies": {
-    "coc-bookmark": ">=1.0.4",
+    "coc-bookmark": ">=1.2.1",
     "coc-css": ">=1.2.3",
-    "coc-eslint": "^1.2.6",
-    "coc-explorer": ">=0.5.1",
-    "coc-git": ">=1.7.11",
+    "coc-eslint": ">=1.2.7",
+    "coc-explorer": ">=0.7.11",
+    "coc-git": ">=1.7.14",
     "coc-highlight": "^1.2.5",
     "coc-html": ">=1.2.4",
-    "coc-json": "^1.2.5",
-    "coc-prettier": ">=1.1.12",
-    "coc-snippets": ">=2.1.26",
+    "coc-json": ">=1.2.6",
+    "coc-prettier": ">=1.1.14",
+    "coc-snippets": ">=2.1.28",
     "coc-tsserver": ">=1.5.1",
     "coc-yaml": "^1.0.4",
     "coc-yank": ">=1.1.4"
