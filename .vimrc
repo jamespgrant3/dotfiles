@@ -40,6 +40,9 @@ nnoremap <silent> <leader>s :so %<CR>
 nnoremap <silent> <leader>q :q<CR>
 nnoremap <silent> <leader>w :w<CR>
 
+" toggle line numbering
+nnoremap <silent> <leader>rn :set rnu!<CR>
+
 " fugitive maps
 nnoremap <silent> <leader>gs :Gstatus<CR>
 nnoremap <silent> <leader>gb :Gblame<CR>
