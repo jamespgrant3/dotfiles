@@ -336,13 +336,13 @@
 	<key>NSWindow Frame ProfilesPanel</key>
 	<string>550 519 735 382 0 0 1792 1097 </string>
 	<key>NSWindow Frame SUStatusFrame</key>
-	<string>696 735 400 129 0 0 1792 1097 </string>
+	<string>696 743 400 129 0 0 1792 1120 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>586 538 620 392 0 0 1792 1097 </string>
+	<string>586 546 620 392 0 0 1792 1120 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>0 0 1792 1120 0 0 1792 1120 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>1000 563 570 427 0 0 1792 1097 </string>
+	<string>71 259 570 427 0 0 1792 1097 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>361 60 570 452 0 0 1792 1097 </string>
 	<key>New Bookmarks</key>
@@ -350,6 +350,8 @@
 		<dict>
 			<key>ASCII Anti Aliased</key>
 			<true/>
+			<key>ASCII Ligatures</key>
+			<false/>
 			<key>Ambiguous Double Width</key>
 			<false/>
 			<key>Ansi 0 Color</key>
@@ -524,6 +526,8 @@
 			</dict>
 			<key>Badge Text</key>
 			<string></string>
+			<key>Blink Allowed</key>
+			<false/>
 			<key>Blinking Cursor</key>
 			<true/>
 			<key>Blur</key>
@@ -921,7 +925,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>MesloLGSNer-Regular 12</string>
+			<string>MesloLGSNer-Regular 14</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
@@ -970,6 +974,8 @@
 			<array/>
 			<key>Terminal Type</key>
 			<string>xterm-256color</string>
+			<key>Thin Strokes</key>
+			<integer>4</integer>
 			<key>Title Components</key>
 			<integer>3</integer>
 			<key>Transparency</key>
@@ -1000,6 +1006,7 @@
 		<string>3.3.8</string>
 		<string>3.3.11</string>
 		<string>3.3.7</string>
+		<string>3.3.12</string>
 	</array>
 	<key>NoSyncBFPRecents</key>
 	<array>
@@ -1023,7 +1030,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>356E6E7B-597B-4733-9175-4FE8D2B58C89</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>187</integer>
+	<integer>205</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -1798,11 +1805,11 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-06-15T13:39:10Z</date>
+	<date>2020-09-13T18:50:25Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateGroupIdentifier</key>
-	<integer>3091804805</integer>
+	<integer>4257963580</integer>
 	<key>SUUpdateRelaunchingMarker</key>
 	<false/>
 	<key>SoundForEsc</key>
@@ -1822,7 +1829,7 @@
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
 	<key>iTerm Version</key>
-	<string>3.3.11</string>
+	<string>3.3.12</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
