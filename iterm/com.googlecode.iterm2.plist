@@ -336,11 +336,11 @@
 	<key>NSWindow Frame ProfilesPanel</key>
 	<string>550 519 735 382 0 0 1792 1097 </string>
 	<key>NSWindow Frame SUStatusFrame</key>
-	<string>696 743 400 129 0 0 1792 1120 </string>
+	<string>696 726 400 129 0 0 1792 1097 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>586 546 620 392 0 0 1792 1120 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 0 1792 1120 0 0 1792 1120 </string>
+	<string>0 0 3840 2160 0 0 3840 2160 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>71 259 570 427 0 0 1792 1097 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -921,11 +921,11 @@
 			<key>Name</key>
 			<string>vim</string>
 			<key>Non Ascii Font</key>
-			<string>Monaco 12</string>
+			<string>AnonymiceNerdFontComplete- 12</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>MesloLGSNer-Regular 14</string>
+			<string>JetBrainsMono-Medium 14</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
@@ -975,7 +975,7 @@
 			<key>Terminal Type</key>
 			<string>xterm-256color</string>
 			<key>Thin Strokes</key>
-			<integer>4</integer>
+			<integer>0</integer>
 			<key>Title Components</key>
 			<integer>3</integer>
 			<key>Transparency</key>
@@ -989,7 +989,7 @@
 			<key>Use Italic Font</key>
 			<true/>
 			<key>Use Non-ASCII Font</key>
-			<false/>
+			<true/>
 			<key>Vertical Spacing</key>
 			<real>1</real>
 			<key>Visual Bell</key>
@@ -1008,10 +1008,13 @@
 		<string>3.3.7</string>
 		<string>3.3.12</string>
 	</array>
+	<key>NoSyncBFPFavorites</key>
+	<array>
+		<string>MesloLGS NF</string>
+	</array>
 	<key>NoSyncBFPRecents</key>
 	<array>
-		<string>Anonymice Nerd Font</string>
-		<string>Monaco</string>
+		<string>JetBrains Mono</string>
 	</array>
 	<key>NoSyncFrame_SessionsPreferences</key>
 	<dict>
@@ -1023,14 +1026,14 @@
 	<key>NoSyncFrame_SharedPreferences</key>
 	<dict>
 		<key>screenFrame</key>
-		<string>{{0, 0}, {1792, 1120}}</string>
+		<string>{{0, 0}, {3840, 2160}}</string>
 		<key>topLeft</key>
-		<string>{855, 958}</string>
+		<string>{766, 869}</string>
 	</dict>
 	<key>NoSyncInstallationId</key>
 	<string>356E6E7B-597B-4733-9175-4FE8D2B58C89</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>205</integer>
+	<integer>208</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -1805,7 +1808,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-09-13T18:50:25Z</date>
+	<date>2020-09-20T23:13:51Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateGroupIdentifier</key>
