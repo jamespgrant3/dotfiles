@@ -11,7 +11,7 @@
     "coc-prettier": ">=1.1.17",
     "coc-snippets": ">=2.2.0",
     "coc-tsserver": ">=1.5.7",
-    "coc-yaml": ">=1.0.5",
+    "coc-yaml": ">=1.1.0",
     "coc-yank": ">=1.1.5"
   }
 }
