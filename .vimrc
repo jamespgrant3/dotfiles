@@ -32,7 +32,6 @@ Plug 'HerringtonDarkholme/yats.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'MattesGroeger/vim-bookmarks'
 Plug 'ryanoasis/vim-devicons'
-Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
 
 call plug#end()
 
@@ -134,9 +133,6 @@ color dracula
 " folds
 " fold current function
 nnoremap z{ f{zfa}
-
-" markdown
-let g:instant_markdown_logfile = '~/.vim/tmp/swap/instant_markdown.log'
 
 highlight BookmarkSign ctermbg=NONE ctermfg=141
 highlight BookmarkAnnotationSign ctermbg=NONE ctermfg=228
