@@ -38,6 +38,8 @@ call plug#end()
 nnoremap <silent> <leader>s :so %<CR>
 nnoremap <silent> <leader>q :q<CR>
 nnoremap <silent> <leader>w :w<CR>
+" copy current file path into clipboard
+nnoremap <silent> <leader>fn :let @*=@%<CR>
 
 " toggle line numbering
 nnoremap <silent> <leader>rn :set rnu!<CR>
