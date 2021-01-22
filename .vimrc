@@ -54,6 +54,13 @@ nnoremap <silent> <leader>gl :Glog<CR>
 " coc-explorer
 nmap <silent> <space>e :CocCommand explorer<CR>
 
+" todolist
+nmap <silent> <leader>td :CocList todolist<CR>
+" create a todo
+nmap <silent> <leader>tda :CocCommand todolist.create<CR>
+" clear all todos
+nmap <silent> <leader>tdc :CocCommand todolist.clear<CR>
+
 " tab navigation
 nnoremap <silent> - :tabprev<CR>
 nnoremap <silent> = :tabnext<CR>
