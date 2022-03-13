@@ -1,5 +1,6 @@
 syntax on
 
+set dir=$HOME/.vim/tmp/swap
 set number relativenumber
 set tabstop=2       " number of visual spaces per TAB
 set softtabstop=2   " number of spaces in tab when editing
@@ -8,12 +9,20 @@ set expandtab       " tabs are space
 set clipboard=unnamed
 set cmdheight=2
 set hidden
-set rtp+=~/.fzf
+" set rtp+=~/.fzf
 set splitbelow
 set splitright
 set ignorecase
 set autoread
 set noswapfile
+"set cursorcolumn " show vertical cursor highlight
+set paste " paste text without reformatting it
+" sets the height for fugitive's git status window.
+"set previewheight=25
+
+" prevent vim ex mode, annoying
+map q: <Nop>
+nnoremap Q <nop>
 
 let mapleader = "\\"
 
@@ -25,15 +34,36 @@ call plug#begin('~/.vim/plugged')
 Plug 'dracula/vim', {'as': 'dracula'}
 Plug 'hashivim/vim-terraform'
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
-Plug 'vim-airline/vim-airline'
-Plug 'mhinz/vim-signify'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'MattesGroeger/vim-bookmarks'
-Plug 'ryanoasis/vim-devicons'
 
+" experiment
+Plug 'kyazdani42/nvim-web-devicons'
+"Plug 'kyazdani42/nvim-tree.lua'
+
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+
+" end experiment
 call plug#end()
+
+" experiment bindings
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+
+"lua << EOF
+"require('telescope').setup{
+"  defaults = {
+"    file_ignore_patterns = {
+"      "node_modules"
+"    }
+"  }
+"}
+"EOF
 
 nnoremap <silent> <leader>s :so %<CR>
 nnoremap <silent> <leader>q :q<CR>
@@ -69,7 +99,7 @@ nnoremap <leader>nt :tabnew<CR>
 " buffer
 nnoremap <silent> <leader>bd :bd<CR>
 
-nnoremap <silent>; :FZF<CR>
+" nnoremap <silent>; :FZF<CR>
 
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
@@ -95,16 +125,6 @@ command! -nargs=0 OR :call CocAction('runCommand', 'editor.action.organizeImport
 
 " cos-prettier
 nmap <silent> <leader>p :Prettier<CR>
-set dir=$HOME/.vim/tmp/swap
-
-" nerdtree bindings
-" open file in nerdtree
-" nmap <silent> <leader>f :NERDTreeFind<CR>
-" show hidden/dotfiles
-" let NERDTreeShowHidden=1
-" close after opening a file
-" let NERDTreeQuitOnOpen=1
-" map <C-n> :NERDTreeToggle<CR>
 
 let g:airline#extensions#tabline#formatter = 'default'
 
@@ -127,9 +147,6 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 let g:nvim_typescript#max_completion_detail = 100
 let g:nvim_typescript#type_info_on_hold = 1
 
-" sets the height for fugitive's git status window.
-set previewheight=25
-
 " coc-prettier
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
@@ -145,3 +162,5 @@ nnoremap z{ f{zfa}
 
 highlight BookmarkSign ctermbg=NONE ctermfg=141
 highlight BookmarkAnnotationSign ctermbg=NONE ctermfg=228
+
+
