@@ -7,18 +7,11 @@ set softtabstop=2   " number of spaces in tab when editing
 set shiftwidth=2    " number of spaces to use for autoindent
 set expandtab       " tabs are space
 set clipboard=unnamed
-set cmdheight=2
-set hidden
-" set rtp+=~/.fzf
 set splitbelow
 set splitright
 set ignorecase
 set autoread
 set noswapfile
-"set cursorcolumn " show vertical cursor highlight
-set paste " paste text without reformatting it
-" sets the height for fugitive's git status window.
-"set previewheight=25
 
 " prevent vim ex mode, annoying
 map q: <Nop>
@@ -38,15 +31,11 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'MattesGroeger/vim-bookmarks'
-
-" experiment
 Plug 'kyazdani42/nvim-web-devicons'
-"Plug 'kyazdani42/nvim-tree.lua'
-
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 
-" end experiment
 call plug#end()
 
 " experiment bindings
@@ -55,15 +44,13 @@ nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
-"lua << EOF
-"require('telescope').setup{
-"  defaults = {
-"    file_ignore_patterns = {
-"      "node_modules"
-"    }
-"  }
-"}
-"EOF
+lua << EOF
+require('telescope').setup{
+  defaults = {
+    file_ignore_patterns = { "node_modules" },
+  }
+}
+EOF
 
 nnoremap <silent> <leader>s :so %<CR>
 nnoremap <silent> <leader>q :q<CR>
@@ -82,7 +69,7 @@ nnoremap <silent> <leader>gd :Git diff<CR>
 nnoremap <silent> <leader>gl :Git log<CR>
 
 " coc-explorer
-nmap <silent> <space>e :CocCommand explorer<CR>
+ nmap <silent> <space>e :CocCommand explorer<CR>
 
 " todolist
 nmap <silent> <leader>td :CocList todolist<CR>
@@ -107,7 +94,7 @@ nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 nmap <silent> <leader>[ <Plug>(coc-diagnostic-prev)
 nmap <silent> <leader>] <Plug>(coc-diagnostic-next)
-nmap <leader>i <Plug>(coc-fix-current)
+nmap <silent> <leader>fc <Plug>(coc-fix-current)
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 autocmd FileType typescript nmap <buffer> <leader>e <Plug>(coc-rename)
 autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
@@ -123,7 +110,7 @@ endfunction
 " organize imports
 command! -nargs=0 OR :call CocAction('runCommand', 'editor.action.organizeImport')
 
-" cos-prettier
+" coc-prettier
 nmap <silent> <leader>p :Prettier<CR>
 
 let g:airline#extensions#tabline#formatter = 'default'
@@ -134,17 +121,11 @@ nnoremap <C-k> <C-w><C-k>
 nnoremap <C-l> <C-w><C-l>
 nnoremap <C-h> <C-w><C-h>
 
-autocmd FileType typescript nmap <buffer> <leader>r :TSRefs<CR>
-autocmd FileType typescript nmap <buffer> <leader>e :TSRename<CR>
-" autocmd FileType typescript nmap <buffer> <leader>i :TSImport<CR>
-autocmd FileType typescript nmap <buffer> <leader>t :TSType<CR>
-autocmd FileType typescript nmap <buffer> <C-]> :TSDefPreview<CR>
-
 " use tab/shift+tab to navigate autocomplete options.
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
-let g:nvim_typescript#max_completion_detail = 100
+"let g:nvim_typescript#max_completion_detail = 100
 let g:nvim_typescript#type_info_on_hold = 1
 
 " coc-prettier
@@ -162,5 +143,3 @@ nnoremap z{ f{zfa}
 
 highlight BookmarkSign ctermbg=NONE ctermfg=141
 highlight BookmarkAnnotationSign ctermbg=NONE ctermfg=228
-
-
