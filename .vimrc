@@ -12,6 +12,7 @@ set splitright
 set ignorecase
 set autoread
 set noswapfile
+set scrolloff=3
 
 " prevent vim ex mode, annoying
 map q: <Nop>
@@ -21,6 +22,7 @@ let mapleader = "\\"
 
 autocmd BufNewFile,BufRead *.md set filetype=markdown
 autocmd BufNewFile,BufRead *.tsx set filetype=typescript
+nnoremap <silent>cp :!cp ../../.env.development.local ./.env.development.local<cr>
 
 call plug#begin('~/.vim/plugged')
 
@@ -33,9 +35,14 @@ Plug 'tpope/vim-fugitive'
 Plug 'MattesGroeger/vim-bookmarks'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'psliwka/vim-smoothie'
+
+Plug 'ThePrimeagen/git-worktree.nvim'
+Plug 'nvim-lualine/lualine.nvim'
+"Plug 'nvim-lua/popup.nvim'
+" keep
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
-
 call plug#end()
 
 " experiment bindings
@@ -44,6 +51,10 @@ nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
+" git-worktree bindings
+nnoremap <leader>wt :lua require('telescope').extensions.git_worktree.git_worktrees()<cr>
+nnoremap <leader>cwt :lua require('telescope').extensions.git_worktree.create_git_worktree()<cr>
+
 lua << EOF
 require('telescope').setup{
   defaults = {
@@ -51,6 +62,57 @@ require('telescope').setup{
   }
 }
 EOF
+
+lua << END
+require("telescope").load_extension("git_worktree")
+
+local Worktree = require("git-worktree")
+local api = vim.api
+
+Worktree.on_tree_change(function(op, metadata)
+  --if op == Worktree.Operations.Switch then
+  --  api.nvim_command(':!cp -i ../../.env.development.local ./.env.development.local')
+  --end
+end)
+
+
+--nnoremap <silent>cp :!cp ../../.env.development.local ./.env.development.local<cr>
+
+END
+    " lualine_b = {'branch', 'diff', 'diagnostics'},
+lua << END
+require('lualine').setup({
+  options = {
+    icons_enabled = true,
+    theme = 'dracula',
+    component_separators = { left = '', right = ''},
+    section_separators = { left = '', right = ''},
+    disabled_filetypes = {},
+    always_divide_middle = true,
+    globalstatus = false,
+  },
+  sections = {
+    lualine_a = {'mode'},
+    lualine_b = {'branch'},
+    lualine_c = {'filename'},
+    lualine_x = {'filetype'},
+    lualine_y = {},
+    --lualine_y = {'progress'},
+    lualine_z = {}
+    --lualine_z = {'location'}
+  },
+  inactive_sections = {
+    lualine_a = {},
+    lualine_b = {},
+    lualine_c = {},
+    lualine_x = {},
+    lualine_y = {},
+    lualine_z = {}
+  },
+  tabline = {},
+  extensions = {}
+})
+END
 
 nnoremap <silent> <leader>s :so %<CR>
 nnoremap <silent> <leader>q :q<CR>
