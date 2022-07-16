@@ -55,6 +55,9 @@ nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 nnoremap <leader>wt :lua require('telescope').extensions.git_worktree.git_worktrees()<cr>
 nnoremap <leader>cwt :lua require('telescope').extensions.git_worktree.create_git_worktree()<cr>
 
+" reload color scheme, useful when window is in an odd state
+nnoremap <silent> <leader>cs :colorscheme dracula<cr>
+
 lua << EOF
 require('telescope').setup{
   defaults = {
