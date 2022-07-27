@@ -883,7 +883,7 @@
 			<key>Title Components</key>
 			<integer>513</integer>
 			<key>Transparency</key>
-			<real>0.79829767607471147</real>
+			<real>0.60031196609299597</real>
 			<key>Unlimited Scrollback</key>
 			<false/>
 			<key>Use Bold Font</key>
@@ -1541,7 +1541,7 @@
 			<key>Title Components</key>
 			<integer>3</integer>
 			<key>Transparency</key>
-			<real>0.2941028712951031</real>
+			<real>0.79979069854743023</real>
 			<key>Unlimited Scrollback</key>
 			<false/>
 			<key>Use Bold Font</key>
@@ -2207,7 +2207,7 @@
 			<key>Title Components</key>
 			<integer>513</integer>
 			<key>Transparency</key>
-			<real>0.59173444884731785</real>
+			<real>0.79684763659665314</real>
 			<key>Unlimited Scrollback</key>
 			<false/>
 			<key>Use Bold Font</key>
