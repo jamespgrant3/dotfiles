@@ -1,0 +1,31 @@
+{
+  "coc.preferences.formatOnSaveFiletypes": [
+    "css",
+    "graphql",
+    "html",
+    "javascript",
+    "javascriptreact",
+    "json",
+    "less",
+    "Markdown",
+    "scss",
+    "tf",
+    "typescript",
+    "typescriptreact",
+    "yaml",
+    "yml"
+  ],
+  "explorer.icon.enableNerdfont": true,
+  "explorer.previewAction.onHover": false,
+  "explorer.openAction.strategy": "sourceWindow",
+  "explorer.floating.position": "center-top",
+  "explorer.position": "floating",
+  "explorer.quitOnOpen": true,
+  "explorer.width": 40,
+  "snippets.extends": {
+    "javascriptreact": ["javascript"],
+    "javascript": ["javascript"],
+    "typescript": ["javascript"]
+  },
+  "yaml.format.enable": true
+}

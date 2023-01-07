@@ -19,6 +19,8 @@ ln -s $HOME/repos/dotfiles/.gitconfig ~/.gitconfig
 ln -s $HOME/repos/dotfiles/.tmux.conf ~/.tmux.conf
 ln -s $HOME/repos/dotfiles/.vimrc ~/.vimrc
 ln -s $HOME/repos/dotfiles/.zshrc ~/.zshrc
+ln -s $HOME/repos/dotfiles/init.vim ~/.config/nvim/init.vim
+ln -s $HOME/repos/dotfiles/coc.nvim/coc-settings.json ~/.config/nvim/coc-settings.json
 ```
 
 `.awsrc` holds credentials BUT is git ignored.

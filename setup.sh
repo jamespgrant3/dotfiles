@@ -5,6 +5,7 @@ ln -sf `pwd`/.gitconfig $HOME/.gitconfig
 
 # Setup vim
 ln -sf `pwd`/.vimrc $HOME/.vimrc
+ln -sf `pwd`/.zshrc $HOME/.zshrc
 ln -sf `pwd`/init.vim $HOME/.config/nvim/init.vim
 ln -sf `pwd`/coc.nvim/coc-settings.json $HOME/.config/nvim/coc-settings.json
 mkdir -p $HOME/.config/coc/extensions

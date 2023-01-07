@@ -1,18 +1,8 @@
-export PATH="/usr/local/opt/ruby/bin:$PATH"
-export PATH="$PATH:$HOME/.yarn/bin"
-export PATH="$PATH:$HOME/.config/yarn/global/node_modules/.bin"
-export PATH="$PATH:$HOME/apps/nvim-osx64/bin/"
-export PATH="$PATH:$HOME/apps/"
-export PATH="$PATH:$HOME/apps/minikube/"
+#export PATH="/usr/local/opt/ruby/bin:$PATH"
+export PATH="$PATH:$HOME/apps/nvim-macos/bin/"
 export PATH="$PATH:$HOME/apps/gh/bin/"
 export PATH="$PATH:/usr/local/bin"
-#export PATH="$PATH:$HOME/.rbenv/bin"
-export PATH="$PATH:/usr/local/opt/libpq/bin"
-export PATH="$PATH:$HOME/repos/clients/expr/scripts"
-export PATH="$PATH:$HOME/apps/kind"
-
-# go install directory
-export PATH="$PATH:$HOME/go/bin"
+export PATH="$PATH:$HOME/.rvm/bin"
 
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
@@ -20,18 +10,23 @@ eval "$(pyenv init -)"
 alias py="$(pyenv which python)"
 alias pip="$(pyenv which pip)"
 
-#export KUBECONFIG=$HOME/.kube/awsconfig
+# upgrade neovim
+alias vu="cd $HOME/apps && curl -L -o nvim.tar.gz https://github.com/neovim/neovim/releases/download/stable/nvim-macos.tar.gz && tar xzf nvim.tar.gz && rm nvim.tar.gz"
 
 # use vim on the command-line
 set -o vi
 
 # jekyll
-export JEKYLL_VERSION=latest
+export JEKYLL_VERSION=4.2.0
 
 alias jb="docker run --rm --volume='$PWD:/srv/jekyll' -it jekyll/jekyll:$JEKYLL_VERSION jekyll build"
 alias jh="docker run --rm --volume='$PWD:/srv/jekyll' -p 4000:4000 -it jekyll/jekyll:$JEKYLL_VERSION jekyll serve --help"
 alias jsd="docker run --rm --volume='$PWD:/srv/jekyll' -p 4000:4000 -it jekyll/jekyll:$JEKYLL_VERSION jekyll serve -w -l -D"
-alias js="docker run --rm --volume='/Users/jamesgrant/repos/blog:/srv/jekyll' -p 4000:4000 -it jekyll/jekyll:$JEKYLL_VERSION jekyll serve -w -l"
+alias js="docker run --rm --volume='/Users/james/repos/blog:/srv/jekyll' -p 4000:4000 -it jekyll/jekyll:$JEKYLL_VERSION jekyll serve -w -l"
+
+alias resume="docker run --rm --volume='/Users/james/repos/resume:/srv/jekyll' -p 4000:4000 -it jekyll/jekyll:$JEKYLL_VERSION jekyll serve -w -l"
+
+alias bu="aws s3 sync '/Volumes/Seagate Backup Plus Drive/Crashplan' s3://james-external-backup"
 # end jekyll
 
 export EDITOR="nvim"
@@ -44,7 +39,6 @@ export FZF_DEFAULT_COMMAND='ag --hidden --ignore node_modules .git -g ""'
 
 alias nv="nvim"
 alias tx="tmuxinator"
-alias npm="pnpm"
 
 # see list of used ports for pid
 alias ports="lsof -i -n -P | grep TCP"
@@ -70,7 +64,5 @@ newpost() {
   py new-post.py --layout post --file $1 --tags $2 --title $3
 }
 # end blog shortcuts
-
-eval "$(rbenv init - zsh)"
 
 source ~/.awsrc
