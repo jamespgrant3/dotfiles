@@ -53,4 +53,5 @@ newpost() {
 }
 # end blog shortcuts
 
-source ~/.awsrc
+# creep credentialish things out of zshrc
+source ~/.credentials
