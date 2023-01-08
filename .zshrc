@@ -1,11 +1,9 @@
-#export PATH="/usr/local/opt/ruby/bin:$PATH"
 export PATH="$PATH:$HOME/apps/nvim-macos/bin/"
 export PATH="$PATH:$HOME/apps/gh/bin/"
 export PATH="$PATH:/usr/local/bin"
 export PATH="$PATH:$HOME/.rvm/bin"
 
 export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 alias py="$(pyenv which python)"
 alias pip="$(pyenv which pip)"
@@ -18,26 +16,20 @@ set -o vi
 
 # jekyll
 export JEKYLL_VERSION=4.2.0
-
 alias jb="docker run --rm --volume='$PWD:/srv/jekyll' -it jekyll/jekyll:$JEKYLL_VERSION jekyll build"
 alias jh="docker run --rm --volume='$PWD:/srv/jekyll' -p 4000:4000 -it jekyll/jekyll:$JEKYLL_VERSION jekyll serve --help"
 alias jsd="docker run --rm --volume='$PWD:/srv/jekyll' -p 4000:4000 -it jekyll/jekyll:$JEKYLL_VERSION jekyll serve -w -l -D"
 alias js="docker run --rm --volume='/Users/james/repos/blog:/srv/jekyll' -p 4000:4000 -it jekyll/jekyll:$JEKYLL_VERSION jekyll serve -w -l"
-
-alias resume="docker run --rm --volume='/Users/james/repos/resume:/srv/jekyll' -p 4000:4000 -it jekyll/jekyll:$JEKYLL_VERSION jekyll serve -w -l"
+# end jekyll
 
 alias bu="aws s3 sync '/Volumes/Seagate Backup Plus Drive/Crashplan' s3://james-external-backup"
-# end jekyll
 
 export EDITOR="nvim"
 #export PROMPT='%m:%~$ '
 export PROMPT="%F{green}%*%f:%F{magenta}%~%f %% "
-export GITHUB_TOKEN="a1a8d84801d6ba648ca9314d9fe1cb5867d80c9a"
-
-# ignore some files
-export FZF_DEFAULT_COMMAND='ag --hidden --ignore node_modules .git -g ""'
 
 alias nv="nvim"
+alias vi="nvim"
 alias tx="tmuxinator"
 
 # see list of used ports for pid
@@ -48,10 +40,6 @@ alias ds="find . -name \".DS_Store\" -delete"
 alias ll="ls -aflh"
 alias tr="git log --graph --pretty=oneline --abbrev-commit"
 alias ..="cd .."
-
-autoload bashcompinit && bashcompinit
-autoload -Uz compinit && compinit
-compinit
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
