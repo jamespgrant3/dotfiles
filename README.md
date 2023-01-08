@@ -11,12 +11,4 @@ ln -s ~/repos/dotfiles/.awsrc ~/.awsrc
 ls -la
 ```
 
-```sh
-# current symlinks
-ln -s $HOME/repos/dotfiles/.awsrc ~/.awsrc
-ln -s $HOME/repos/dotfiles/.gitconfig ~/.gitconfig
-ln -s $HOME/repos/dotfiles/.tmux.conf ~/.tmux.conf
-ln -s $HOME/repos/dotfiles/.zshrc ~/.zshrc
-```
-
 `.awsrc` holds credentials BUT is git ignored.
