@@ -1,5 +1,4 @@
-export PATH="$PATH:$HOME/apps/nvim-macos/bin/"
-export PATH="$PATH:$HOME/apps/gh/bin/"
+export PATH="$PATH:$HOME/apps/"
 export PATH="$PATH:/usr/local/bin"
 export PATH="$PATH:$HOME/.rvm/bin"
 
