@@ -1,13 +1,4 @@
-## Setup Instructions
-- clone repo
-- run setup.sh
-  - ensure path in setup.sh is accurate
-  - `chmod +x ./setup.sh`
-  - execute setup script to symlink nvim folder
-- install a plugin manager
-  - [packer](https://github.com/wbthomason/packer.nvim)
-  - open packer.lua
-  - `:PackerSync`
+vim configuration is now lua-based, see [here](https://github.com/jamespgrant3/nvim-lua)
 
 ## Notes
 All dotfiles are referenced in `~/` using a symlink to the dotfiles repository. This allows for the files to appear in the appropriate place, but managed in a git repo.
