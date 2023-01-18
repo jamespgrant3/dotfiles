@@ -1,4 +1,6 @@
-export PATH="$PATH:$HOME/apps/"
+export PATH="$PATH:$HOME/apps/nvim-macos/bin"
+export PATH="$PATH:$HOME/apps/gh/bin"
+export PATH="$PATH:$HOME/apps"
 export PATH="$PATH:/usr/local/bin"
 export PATH="$PATH:$HOME/.rvm/bin"
 
@@ -51,6 +53,3 @@ newpost() {
   py new-post.py --layout post --file $1 --tags $2 --title $3
 }
 # end blog shortcuts
-
-# creep credentialish things out of zshrc
-source ~/.credentials
