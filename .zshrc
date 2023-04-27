@@ -43,3 +43,20 @@ autoload bashcompinit && bashcompinit
 autoload -Uz compinit && compinit
 
 complete -C '/usr/local/bin/aws_completer' aws
+
+# worktree add
+# $1 worktree/branch name
+# $2 remote branch
+wa(){
+  git worktree add --track -b $1 $1 $2
+}
+
+# worktree remove
+# $1 worktree name
+wr(){
+  echo "deleting worktree"
+  git worktree remove $1
+
+  echo "deleting branch"
+  git branch -D $1
+}
