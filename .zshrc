@@ -23,6 +23,7 @@ export PROMPT="%~%f %% "
 alias nv="nvim"
 alias vi="nvim"
 alias tx="tmuxinator"
+alias bu="brew upgrade"
 
 # see list of used ports for pid
 alias ports="lsof -i -n -P | grep TCP"
@@ -44,19 +45,28 @@ autoload -Uz compinit && compinit
 
 complete -C '/usr/local/bin/aws_completer' aws
 
-# worktree add
+# worktree add w/ branch
 # $1 worktree/branch name
-# $2 remote branch
-wa(){
-  git worktree add --track -b $1 $1 $2
+gwan(){
+  #git worktree add --track -b $1 ../$1
+  git worktree add -b $1 ../$1 origin/$1
+}
+
+# checkout existing branch into a worktree
+gwae(){
+  git worktree add $1 $1 && git branch --set-upstream-to=origin/$1
 }
 
 # worktree remove
 # $1 worktree name
-wr(){
+gwr(){
   echo "deleting worktree"
   git worktree remove $1
 
-  echo "deleting branch"
-  git branch -D $1
+  #echo "deleting branch"
+  #git branch -D $1
+}
+
+gwl(){
+  git worktree list
 }
