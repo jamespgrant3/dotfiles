@@ -12,6 +12,11 @@ alias pip="$(pyenv which pip)"
 # upgrade neovim
 alias vu="cd $HOME/apps && curl -L -o nvim.tar.gz https://github.com/neovim/neovim/releases/download/stable/nvim-macos.tar.gz && tar xzf nvim.tar.gz && rm nvim.tar.gz"
 
+# working with git worktrees doesn't always set the remote, this does
+alias setremote="git config remote.origin.fetch \"+refs/heads/*:refs/remotes/origin/*\""
+
+alias k="kubectl"
+
 # use vim on the command-line
 set -o vi
 
@@ -19,6 +24,8 @@ export EDITOR="nvim"
 #export PROMPT='%m:%~$ '
 #export PROMPT="%F{green}%*%f:%F{magenta}%~%f %% "
 export PROMPT="%~%f %% "
+
+alias who="aws sts get-caller-identity"
 
 alias nv="nvim"
 alias vi="nvim"
@@ -30,6 +37,7 @@ alias ports="lsof -i -n -P | grep TCP"
 
 # recursively delete .DS_Store files
 alias ds="find . -name \".DS_Store\" -delete"
+
 alias ll="ls -aflh"
 alias tr="git log --graph --pretty=oneline --abbrev-commit"
 alias ..="cd .."
