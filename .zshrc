@@ -56,8 +56,8 @@ complete -C '/usr/local/bin/aws_completer' aws
 # worktree add w/ branch
 # $1 worktree/branch name
 gwan(){
-  #git worktree add --track -b $1 ../$1
-  git worktree add -b $1 ../$1 origin/$1
+  git worktree add ../$1 -b $1
+  #git worktree add -b $1 ../$1 origin/$1
 }
 
 # checkout existing branch into a worktree
