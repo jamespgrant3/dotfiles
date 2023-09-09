@@ -14,3 +14,7 @@ ln -s `pwd`/init.vim $HOME/.config/nvim/init.vim
 ln -s `pwd`/.tmux.conf $HOME/.tmux.conf
 
 ln -s `pwd`/.zshrc $HOME/.zshrc
+
+ln -s `pwd`/.personal-zshrc $HOME/.personal-zshrc
+
+ln -s `pwd`/.client $HOME/.client

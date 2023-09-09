@@ -1,0 +1,5 @@
+#alias 2os="tx start 2os"
+alias clearaws="unset AWS_SESSION_TOKEN AWS_SECRET_ACCESS_KEY AWS_ACCESS_KEY_ID"
+alias 2os="cd $HOME/repos/clients/2os/cli && npm run cli"
+
+export PATH_TO_PEM=$HOME/Downloads/james-grant.pem

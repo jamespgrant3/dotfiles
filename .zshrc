@@ -62,7 +62,7 @@ gwan(){
 
 # checkout existing branch into a worktree
 gwae(){
-  git worktree add $1 $1 && git branch --set-upstream-to=origin/$1
+  git worktree add $1 $1 && cd $1 && git branch --set-upstream-to=origin/$1 && cd ..
 }
 
 # worktree remove
