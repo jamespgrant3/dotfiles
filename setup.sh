@@ -2,19 +2,18 @@
 # run this from within the repo directory
 
 # Setup git
-ln -s `pwd`/.gitconfig $HOME/.gitconfig
+ln -s `pwd`/master/.gitconfig $HOME/.gitconfig
 
 # Setup vim
-ln -s `pwd`/init.vim $HOME/.config/nvim/init.vim
+mkdir -p $HOME/.config/nvim
+ln -s `pwd`/master/init.vim $HOME/.config/nvim/init.vim
 
-ln -s `pwd`/.vimrc $HOME/.vimrc
+ln -s `pwd`/master/.vimrc $HOME/.vimrc
 
-ln -s `pwd`/init.vim $HOME/.config/nvim/init.vim
+ln -s `pwd`/master/.tmux.conf $HOME/.tmux.conf
 
-ln -s `pwd`/.tmux.conf $HOME/.tmux.conf
+ln -s `pwd`/master/.zshrc $HOME/.zshrc
 
-ln -s `pwd`/.zshrc $HOME/.zshrc
+ln -s `pwd`/master/.personal-zshrc $HOME/.personal-zshrc
 
-ln -s `pwd`/.personal-zshrc $HOME/.personal-zshrc
-
-ln -s `pwd`/.client $HOME/.client
+ln -s `pwd`/master/.client $HOME/.client
