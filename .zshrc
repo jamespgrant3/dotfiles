@@ -1,9 +1,13 @@
 export PATH="$PATH:$HOME/apps/nvim-macos/bin"
 export PATH="$PATH:$HOME/apps/gh/bin"
+export PATH="$PATH:$HOME/apps/lua"
+export PATH="$PATH:$HOME/apps/lua-language-server/bin"
 export PATH="$PATH:$HOME/apps"
 export PATH="$PATH:/usr/local/bin"
 export PATH="$PATH:$HOME/.rvm/bin"
+export PATH="$PATH:$HOME/.pyenv/bin"
 
+# pyenv is installed by cloning pyenv repo, see https://github.com/pyenv/pyenv#basic-github-checkout
 export PYENV_ROOT="$HOME/.pyenv"
 eval "$(pyenv init -)"
 alias py="$(pyenv which python)"
