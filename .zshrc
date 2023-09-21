@@ -36,6 +36,9 @@ alias vi="nvim"
 alias tx="tmuxinator"
 alias bu="brew upgrade"
 
+# see session files saved by tmux-resurrect
+alias txr="cd $HOME/.local/share/tmux/resurrect"
+
 # see list of used ports for pid
 alias ports="lsof -i -n -P | grep TCP"
 
