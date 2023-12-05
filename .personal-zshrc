@@ -38,7 +38,7 @@ cprd() {
   --draft
 }
 
-alias bu="aws s3 sync '/Volumes/Seagate Backup Plus Drive/Crashplan' s3://james-external-backup"
+alias sync="aws s3 sync '/Volumes/Seagate Backup Plus Drive/Crashplan' s3://james-external-backup"
 alias sop="source $HOME/.zprofile"
 alias so="source $HOME/.personal-zshrc"
 
