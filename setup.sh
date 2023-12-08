@@ -6,7 +6,7 @@ ln -s `pwd`/master/.gitconfig $HOME/.gitconfig
 
 # Setup vim
 mkdir -p $HOME/.config/nvim
-ln -s `pwd`/master/init.vim $HOME/.config/nvim/init.vim
+ln -s `pwd`/master $HOME/.config/nvim
 
 ln -s `pwd`/master/.vimrc $HOME/.vimrc
 
