@@ -1,8 +1,9 @@
+export PATH="$PATH:$HOME/apps"
 export PATH="$PATH:$HOME/apps/nvim-macos/bin"
 export PATH="$PATH:$HOME/apps/gh/bin"
 export PATH="$PATH:$HOME/apps/lua"
 export PATH="$PATH:$HOME/apps/lua-language-server/bin"
-export PATH="$PATH:$HOME/apps"
+export PATH="$PATH:$HOME/apps/op"
 export PATH="$PATH:/usr/local/bin"
 export PATH="$PATH:$HOME/.rvm/bin"
 export PATH="$PATH:$HOME/.pyenv/bin"
@@ -85,3 +86,5 @@ complete -C '/usr/local/bin/aws_completer' aws
 gwl(){
   git worktree list
 }
+
+source $HOME/.config/op/plugins.sh
