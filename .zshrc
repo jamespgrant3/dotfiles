@@ -7,12 +7,15 @@ export PATH="$PATH:$HOME/apps/op"
 export PATH="$PATH:/usr/local/bin"
 export PATH="$PATH:$HOME/.rvm/bin"
 export PATH="$PATH:$HOME/.pyenv/bin"
+#export PATH="$PATH:$HOME/.cargo/bin"
 
 # pyenv is installed by cloning pyenv repo, see https://github.com/pyenv/pyenv#basic-github-checkout
 export PYENV_ROOT="$HOME/.pyenv"
 eval "$(pyenv init -)"
 alias py="$(pyenv which python)"
 alias pip="$(pyenv which pip)"
+
+alias ts="$HOME/repos/dotfiles/master/tmux-sessionizer"
 
 # upgrade neovim
 alias vu="cd $HOME/apps && curl -L -o nvim.tar.gz https://github.com/neovim/neovim/releases/download/stable/nvim-macos.tar.gz && tar xzf nvim.tar.gz && rm nvim.tar.gz"
@@ -88,3 +91,4 @@ gwl(){
 }
 
 source $HOME/.config/op/plugins.sh
+#source $HOME/.cargo/env
