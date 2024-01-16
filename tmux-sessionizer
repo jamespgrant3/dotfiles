@@ -20,6 +20,11 @@ if [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then
   exit 0
 fi
 
+# auto connect to default
+if tmux has-session -t=$selected_name 2> /dev/null; then
+  tmux a -t $selected_name
+fi
+
 # tmux is running, but no session is running
 if ! tmux has-session -t=$selected_name 2> /dev/null; then
   tmux new-session -ds $selected_name -c $selected

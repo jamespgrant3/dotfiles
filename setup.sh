@@ -2,18 +2,22 @@
 # run this from within the repo directory
 
 # Setup git
-ln -s `pwd`/master/.gitconfig $HOME/.gitconfig
+ln -s $HOME/repos/dotfiles/master/.gitconfig $HOME/.gitconfig
 
 # Setup vim
 mkdir -p $HOME/.config/nvim
-ln -s `pwd`/master $HOME/.config/nvim
+ln -s $HOME/repos/dotfiles/master $HOME/.config/nvim
 
-ln -s `pwd`/master/.vimrc $HOME/.vimrc
+ln -s $HOME/repos/dotfiles/master/.vimrc $HOME/.vimrc
 
-ln -s `pwd`/master/.tmux.conf $HOME/.tmux.conf
+ln -s $HOME/repos/dotfiles/master/.tmux.conf $HOME/.tmux.conf
 
-ln -s `pwd`/master/.zshrc $HOME/.zshrc
+ln -s $HOME/repos/dotfiles/master/.zshrc $HOME/.zshrc
 
-ln -s `pwd`/master/.personal-zshrc $HOME/.personal-zshrc
+ln -s $HOME/repos/dotfiles/master/.personal-zshrc $HOME/.personal-zshrc
 
-ln -s `pwd`/master/.client $HOME/.client
+ln -s $HOME/repos/dotfiles/master/.client $HOME/.client
+
+# window tooling
+ln -s $HOME/repos/dotfiles/master/.skhdrc $HOME/.skhdrc
+ln -s $HOME/repos/dotfiles/master/.yabairc $HOME/.yabairc
