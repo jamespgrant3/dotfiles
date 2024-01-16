@@ -89,6 +89,3 @@ complete -C '/usr/local/bin/aws_completer' aws
 gwl(){
   git worktree list
 }
-
-source $HOME/.config/op/plugins.sh
-#source $HOME/.cargo/env

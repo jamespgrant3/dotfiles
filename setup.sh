@@ -6,7 +6,7 @@ ln -s $HOME/repos/dotfiles/master/.gitconfig $HOME/.gitconfig
 
 # Setup vim
 mkdir -p $HOME/.config/nvim
-ln -s $HOME/repos/dotfiles/master $HOME/.config/nvim
+ln -s $HOME/repos/nvim-lua/master $HOME/.config/nvim
 
 ln -s $HOME/repos/dotfiles/master/.vimrc $HOME/.vimrc
 
