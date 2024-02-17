@@ -63,29 +63,3 @@ autoload bashcompinit && bashcompinit
 autoload -Uz compinit && compinit
 
 complete -C '/usr/local/bin/aws_completer' aws
-
-# worktree add w/ branch
-# $1 worktree/branch name
-#gwan(){
-#  git worktree add ../$1 -b $1
-#  #git worktree add -b $1 ../$1 origin/$1
-#}
-
-# checkout existing branch into a worktree
-#gwae(){
-#  git worktree add $1 $1 && cd $1 && git branch --set-upstream-to=origin/$1 && cd ..
-#}
-
-# worktree remove
-# $1 worktree name
-#gwr(){
-#  echo "deleting worktree"
-#  git worktree remove $1
-#
-#  #echo "deleting branch"
-#  #git branch -D $1
-#}
-
-gwl(){
-  git worktree list
-}

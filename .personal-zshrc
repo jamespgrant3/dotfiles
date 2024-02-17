@@ -1,3 +1,6 @@
+export PATH="$PATH:$HOME/apps/colima"
+export PATH="$PATH:$HOME/apps/docker"
+
 # create pull request with title
 # $1 title
 # $2 base branch
@@ -45,4 +48,39 @@ alias so="source $HOME/.personal-zshrc"
 export AWS_DEFAULT_REGION=us-east-1
 export AWS_DEFAULT_OUTPUT=json
 
-eval $(op signin)
+source $HOME/.config/op/plugins.sh
+
+#source $HOME/.cargo/env
+1pw(){
+  eval $(op signin)
+}
+
+co(){
+  colima start --cpu 1 --memory 2 --disk 10
+}
+
+# worktree add w/ branch
+# $1 worktree name
+# $2 remote
+gwa(){
+  git worktree add -b $1 ./$1 $2
+  #git worktree add -b $1 ../$1 origin/$1
+}
+
+# checkout existing branch into a worktree
+#gwae(){
+#  git worktree add $1 $1 && cd $1 && git branch --set-upstream-to=origin/$1 && cd ..
+#}
+
+# worktree remove
+# $1 worktree name
+gwr(){
+  echo "deleting worktree"
+  git worktree remove $1
+
+  git branch -D $1
+}
+
+gwl(){
+  git worktree list
+}
