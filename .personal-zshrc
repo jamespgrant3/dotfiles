@@ -59,21 +59,15 @@ co(){
   colima start --cpu 1 --memory 2 --disk 10
 }
 
-# worktree add w/ branch
-# $1 worktree name
-# $2 remote
+# worktree add
+# $1 branch name
+# $2 repo
+# $3 origin
+# example gwaa SRE-3714-snaplogic feature/SRE-3714-snaplogic
 gwa(){
-  git worktree add -b $1 ./$1 $2
-  #git worktree add -b $1 ../$1 origin/$1
+  git worktree add -b $1 $HOME/repos/$2/$1 origin/$3
 }
 
-# checkout existing branch into a worktree
-#gwae(){
-#  git worktree add $1 $1 && cd $1 && git branch --set-upstream-to=origin/$1 && cd ..
-#}
-
-# worktree remove
-# $1 worktree name
 gwr(){
   echo "deleting worktree"
   git worktree remove $1
@@ -84,3 +78,4 @@ gwr(){
 gwl(){
   git worktree list
 }
+
