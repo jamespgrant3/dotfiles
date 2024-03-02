@@ -1,5 +1,15 @@
 export PATH="$PATH:$HOME/apps/colima"
 export PATH="$PATH:$HOME/apps/docker"
+export PATH="$PATH:$HOME/apps/lazygit"
+
+# set default config home
+export XDG_CONFIG_HOME="$HOME/.config"
+
+alias lg='lazygit'
+
+# ensure services are running
+skhd --start-service
+yabai --start-service
 
 # create pull request with title
 # $1 title
@@ -63,9 +73,10 @@ co(){
 # $1 branch name
 # $2 repo
 # $3 origin
-# example gwaa SRE-3714-snaplogic feature/SRE-3714-snaplogic
+# example gwa my-branch dotfiles master
 gwa(){
-  git worktree add -b $1 $HOME/repos/$2/$1 origin/$3
+  echo "creating worktree"
+  git worktree add --no-track -b $1 $HOME/repos/$2/$1 origin/$3
 }
 
 gwr(){
@@ -76,6 +87,5 @@ gwr(){
 }
 
 gwl(){
-  git worktree list
+  git worktree list --porcelain
 }
-

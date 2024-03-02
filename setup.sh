@@ -21,3 +21,7 @@ ln -s $HOME/repos/dotfiles/master/.client $HOME/.client
 # window tooling
 ln -s $HOME/repos/dotfiles/master/.skhdrc $HOME/.skhdrc
 ln -s $HOME/repos/dotfiles/master/.yabairc $HOME/.yabairc
+
+# lazy git
+mkdir -p /Users/james/.config/lazygit
+ln -s $HOME/repos/dotfiles/master/.config/lazygit/config.yml $HOME/.config/lazygit/config.yml
