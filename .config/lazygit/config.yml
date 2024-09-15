@@ -49,7 +49,7 @@ gui:
   mouseEvents: false
   skipDiscardChangeWarning: false
   skipStashWarning: false
-  showFileTree: true
+  showFileTree: false
   showListFooter: true
   showRandomTip: false
   showBranchCommitHash: false
