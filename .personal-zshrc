@@ -7,10 +7,6 @@ export XDG_CONFIG_HOME="$HOME/.config"
 
 alias lg='lazygit'
 
-# ensure services are running
-skhd --start-service
-yabai --start-service
-
 # create pull request with title
 # $1 title
 # $2 base branch
@@ -58,9 +54,6 @@ alias so="source $HOME/.personal-zshrc"
 export AWS_DEFAULT_REGION=us-east-1
 export AWS_DEFAULT_OUTPUT=json
 
-source $HOME/.config/op/plugins.sh
-
-#source $HOME/.cargo/env
 1pw(){
   eval $(op signin)
 }
