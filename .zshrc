@@ -1,12 +1,5 @@
-export PATH="$PATH:/usr/local/bin"
 export PATH="$PATH:$HOME/.rvm/bin"
 export PATH="$PATH:$HOME/.pyenv/bin"
-
-# pyenv is installed by cloning pyenv repo, see https://github.com/pyenv/pyenv#basic-github-checkout
-export PYENV_ROOT="$HOME/.pyenv"
-eval "$(pyenv init -)"
-alias py="$(pyenv which python3)"
-alias pip="$(pyenv which pip3)"
 
 alias ts="$HOME/repos/dotfiles/master/tmux-sessionizer"
 
@@ -24,7 +17,6 @@ export PROMPT="%~%f %% "
 alias who="aws sts get-caller-identity"
 
 alias n="nvim"
-alias vi="nvim"
 alias tx="tmuxinator"
 alias bu="brew upgrade"
 alias lg="lazygit"
@@ -51,6 +43,11 @@ alias sop="source $HOME/.zprofile"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export PYENV_ROOT="$HOME/.pyenv"
+eval "$(pyenv init -)"
+alias py="$(pyenv which python3)"
+alias pip="$(pyenv which pip3)"
 
 autoload bashcompinit && bashcompinit
 autoload -Uz compinit && compinit
