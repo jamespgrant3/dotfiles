@@ -30,7 +30,7 @@ alias ports="lsof -i -n -P | grep TCP"
 # recursively delete .DS_Store files
 alias ds="find . -name \".DS_Store\" -delete"
 
-alias ll="ls -aflh"
+alias ll="ls -Alh"
 alias tr="git log --graph --pretty=oneline --abbrev-commit"
 alias ..="cd .."
 # show more history
