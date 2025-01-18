@@ -25,3 +25,6 @@ ln -s $HOME/repos/dotfiles/master/.yabairc $HOME/.yabairc
 # lazy git
 mkdir -p /Users/james/.config/lazygit
 ln -s $HOME/repos/dotfiles/master/.config/lazygit/config.yml $HOME/.config/lazygit/config.yml
+
+# yazi - file explorer
+ln -s $HOME/repos/dotfiles/master/.config/yazi $HOME/.config/yazi
