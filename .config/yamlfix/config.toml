@@ -1,0 +1,5 @@
+# this file provides configuration for yamlfix, a yaml formatter installed with mason
+comments_require_starting_space="true"
+whitelines="1"
+explicit_start="false"
+sequence_style="block_style"
