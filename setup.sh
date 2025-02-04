@@ -14,7 +14,7 @@ ln -s $HOME/repos/dotfiles/master/.tmux.conf $HOME/.tmux.conf
 
 ln -s $HOME/repos/dotfiles/master/.zshrc $HOME/.zshrc
 
-ln -s $HOME/repos/dotfiles/master/.personal-zshrc $HOME/.personal-zshrc
+ln -s $HOME/repos/dotfiles/master/.zprofile $HOME/.zprofile
 
 ln -s $HOME/repos/dotfiles/master/.client $HOME/.client
 

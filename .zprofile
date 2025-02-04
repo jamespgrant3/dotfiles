@@ -1,3 +1,4 @@
+export PATH="$PATH:$HOME/apps"
 export PATH="$PATH:$HOME/apps/colima"
 export PATH="$PATH:$HOME/apps/docker"
 export PATH="$PATH:$HOME/apps/lazygit"
@@ -5,7 +6,10 @@ export PATH="$PATH:$HOME/apps/lazygit"
 # set default config home
 export XDG_CONFIG_HOME="$HOME/.config"
 
-alias lg='lazygit'
+alias lg="lazygit"
+alias ld="lazydocker"
+alias k="kubectl"
+alias k9="k9s"
 
 # create pull request with title
 # $1 title
@@ -47,7 +51,7 @@ cprd() {
   --draft
 }
 
-alias sync="aws s3 sync '/Volumes/Seagate Backup Plus Drive/Crashplan' s3://james-external-backup"
+alias sync="aws s3 sync '/Volumes/Seagate Backup Plus Drive/external' s3://james-external-backup"
 alias sop="source $HOME/.zprofile"
 alias so="source $HOME/.personal-zshrc"
 
