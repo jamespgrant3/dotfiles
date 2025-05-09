@@ -28,3 +28,7 @@ ln -s $HOME/repos/dotfiles/master/.config/lazydocker/config.yml $HOME/.config/la
 
 # yazi - file explorer
 ln -s $HOME/repos/dotfiles/master/.config/yazi $HOME/.config/yazi
+
+# aerospace
+mkdir -p /Users/james/.config/aerospace
+ln -s $HOME/repos/dotfiles/master/.config/aerospace/aerospace.toml $HOME/.config/aerospace/aerospace.toml
