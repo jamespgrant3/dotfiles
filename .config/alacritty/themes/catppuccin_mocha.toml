@@ -1,5 +1,5 @@
 [colors.primary]
-background = '#1E1E2E' # base
+background = '#262626' # base
 foreground = '#CDD6F4' # text
 
 # Bright and dim foreground colors
