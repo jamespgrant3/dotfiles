@@ -13,8 +13,8 @@ linemode       = "none"
 show_hidden    = true
 show_symlink   = true
 scrolloff      = 5
-mouse_events   = [ "click", "scroll" ]
-title_format   = "Yazi: {cwd}"
+mouse_events   = []
+title_format   = ""
 
 [preview]
 wrap            = "no"
@@ -32,8 +32,8 @@ ueberzug_offset = [ 0, 0, 0, 0 ]
 [opener]
 edit = [
 	{ run = '${EDITOR:-vi} "$@"', desc = "$EDITOR", block = true, for = "unix" },
-	{ run = 'code %*',    orphan = true, desc = "code",           for = "windows" },
-	{ run = 'code -w %*', block = true,  desc = "code (block)",   for = "windows" },
+	# { run = 'code %*',    orphan = true, desc = "code",           for = "windows" },
+	# { run = 'code -w %*', block = true,  desc = "code (block)",   for = "windows" },
 ]
 open = [
 	{ run = 'xdg-open "$1"',                desc = "Open", for = "linux" },

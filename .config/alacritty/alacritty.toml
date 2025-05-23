@@ -5,7 +5,7 @@ TERM = "xterm-256color"
 size = 20
 
 [general]
-working_directory = "/Users/james/repos/dotfiles/master/.config/alacritty"
+working_directory = "/Users/james/repos"
 import = [
   "themes/catppuccin_mocha.toml"
 ]
@@ -18,4 +18,3 @@ save_to_clipboard = true
 
 [window]
 decorations = "None"
-startup_mode = "Fullscreen"
