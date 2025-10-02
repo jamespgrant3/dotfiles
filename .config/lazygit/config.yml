@@ -30,7 +30,7 @@ gui:
       - "#cdd6f4"
     searchingActiveBorderColor:
       - "#f9e2af"
-  screenMode: half
+  screenMode: "full"
   scrollHeight: 2
   scrollPastBottom: true
   scrollOffMargin: 2
