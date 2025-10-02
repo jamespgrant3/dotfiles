@@ -1,4 +1,4 @@
-source .credentials
+source $HOME/repos/dotfiles/master/.credentials
 
 export PATH="$PATH:$HOME/apps"
 export PATH="$PATH:$HOME/apps/colima"
@@ -14,6 +14,8 @@ export GGML_METAL=0
 
 # set default config home
 export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_STATE_HOME="$HOME/.local/state"
+export XDG_DATA_HOME="$HOME/.local/share"
 
 alias lg="lazygit"
 alias ld="lazydocker"
