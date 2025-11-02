@@ -7,6 +7,7 @@ export PATH="$PATH:$HOME/apps/lazygit"
 export PATH="$PATH:/usr/local/bin"
 
 export AWS_DEFAULT_REGION=us-east-1
+export AWS_DEFAULT_OUTPUT=json
 
 # ollama
 export OLLAMA_COMPUTE=cpu
@@ -26,25 +27,16 @@ alias ta="terraform apply"
 alias tp="terraform plan"
 alias y="yazi"
 alias m="multipass"
-
-aws_creds() {
-  export AWS_ACCESS_KEY_ID=$1
-  export AWS_SECRET_ACCESS_KEY=$2
-}
-
 alias sync="aws s3 sync '/Volumes/Seagate Backup Plus Drive/external' s3://james-external-backup"
-
-export AWS_DEFAULT_REGION=us-east-1
-export AWS_DEFAULT_OUTPUT=json
 
 1pw(){
   eval $(op signin)
 }
 
-co(){
+c(){
   colima start --cpu 2 --memory 16 --disk 20
 }
 
-cos(){
+cs(){
   colima stop
 }
