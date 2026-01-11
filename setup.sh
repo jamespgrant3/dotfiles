@@ -8,8 +8,6 @@ ln -s $HOME/repos/dotfiles/master/.gitconfig $HOME/.gitconfig
 mkdir -p $HOME/.config/nvim
 ln -s $HOME/repos/nvim-lua/master $HOME/.config/nvim
 
-ln -s $HOME/repos/dotfiles/master/.vimrc $HOME/.vimrc
-
 ln -s $HOME/repos/dotfiles/master/.tmux.conf $HOME/.tmux.conf
 
 ln -s $HOME/repos/dotfiles/master/.zshrc $HOME/.zshrc
