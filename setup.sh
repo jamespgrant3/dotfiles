@@ -4,8 +4,6 @@
 # Setup git
 ln -s $HOME/r/dotfiles/master/.gitconfig $HOME/.gitconfig
 
-# Setup vim
-mkdir -p $HOME/.config/nvim
 ln -s $HOME/r/nvim-lua/master $HOME/.config/nvim
 
 ln -s $HOME/r/dotfiles/master/.tmux.conf $HOME/.tmux.conf
