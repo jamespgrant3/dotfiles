@@ -1,4 +1,4 @@
-source $HOME/repos/dotfiles/master/.credentials
+source $HOME/r/dotfiles/master/.credentials
 
 export PATH="$PATH:$HOME/apps"
 export PATH="$PATH:$HOME/apps/colima"
@@ -28,6 +28,7 @@ alias tp="terraform plan"
 alias y="yazi"
 alias m="multipass"
 alias sync="aws s3 sync '/Volumes/Seagate Backup Plus Drive/external' s3://james-external-backup"
+alias ai="claude"
 
 1pw(){
   eval $(op signin)
@@ -39,4 +40,35 @@ c(){
 
 cs(){
   colima stop
+}
+
+# d = dispay
+d() {
+    local config="$HOME/.config/alacritty/alacritty.toml"
+    [[ -L "$config" ]] && config=$(readlink "$config")
+
+    # l = laptop
+    # d = desktop
+
+    case "$1" in
+        l|d)
+            awk -v mode="$1" '
+                /^#? ?size = [0-9]+/ {
+                    count++
+                    if (mode == "l") {
+                        if (count == 1) sub(/^# /, "")
+                        if (count == 2 && !/^#/) $0 = "# " $0
+                    } else {
+                        if (count == 1 && !/^#/) $0 = "# " $0
+                        if (count == 2) sub(/^# /, "")
+                    }
+                }
+                { print }
+            ' "$config" > "$config.tmp" && mv "$config.tmp" "$config"
+            ;;
+        *)
+            echo "Usage: display {laptop|desktop}"
+            return 1
+            ;;
+    esac
 }
