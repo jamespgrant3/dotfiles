@@ -35,7 +35,7 @@ alias ai="claude"
 }
 
 c(){
-  colima start --cpu 2 --memory 16 --disk 20
+  colima start --cpu 2 --memory 24 --disk 30
 }
 
 cs(){
@@ -55,7 +55,7 @@ d() {
             awk -v mode="$1" '
                 /^#? ?size = [0-9]+/ {
                     count++
-                    if (mode == "l") {
+                    if (mode == "d") {
                         if (count == 1) sub(/^# /, "")
                         if (count == 2 && !/^#/) $0 = "# " $0
                     } else {
