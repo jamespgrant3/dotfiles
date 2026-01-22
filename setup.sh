@@ -4,7 +4,7 @@
 # Setup git
 ln -s $HOME/r/dotfiles/master/.gitconfig $HOME/.gitconfig
 
-ln -s $HOME/r/nvim-lua/master $HOME/.config/nvim
+ln -s $HOME/r/nvim/master $HOME/.config/nvim
 
 ln -s $HOME/r/dotfiles/master/.tmux.conf $HOME/.tmux.conf
 
