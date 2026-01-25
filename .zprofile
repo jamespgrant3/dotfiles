@@ -27,8 +27,18 @@ alias ta="terraform apply"
 alias tp="terraform plan"
 alias y="yazi"
 alias m="multipass"
-alias sync="aws s3 sync '/Volumes/Seagate Backup Plus Drive/external' s3://james-external-backup"
+# alias sync="aws s3 sync '/Volumes/Seagate Backup Plus Drive/external' s3://james-external-backup"
+
+sync(){
+  rclone sync '/Volumes/Seagate Backup Plus Drive/external' external:external --exclude ".DS_Store" -v --progress
+}
+
+syncd(){
+  rclone sync '/Volumes/Seagate Backup Plus Drive/external' external:external --exclude ".DS_Store" -v --progress --dry-run
+}
+
 alias ai="claude"
+alias rc="rclone" # rclone is used for cloudflare r2
 
 1pw(){
   eval $(op signin)
@@ -55,7 +65,7 @@ d() {
             awk -v mode="$1" '
                 /^#? ?size = [0-9]+/ {
                     count++
-                    if (mode == "d") {
+                    if (mode == "l") {
                         if (count == 1) sub(/^# /, "")
                         if (count == 2 && !/^#/) $0 = "# " $0
                     } else {
