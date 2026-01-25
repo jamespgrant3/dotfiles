@@ -1,7 +1,7 @@
 export PATH="$PATH:$HOME/.rvm/bin"
 export PATH="$PATH:$HOME/.pyenv/bin"
 
-alias ts="$HOME/repos/dotfiles/master/tmux-sessionizer"
+alias ts="$HOME/r/dotfiles/master/tmux-sessionizer"
 
 # working with git worktrees doesn't always set the remote, this does
 alias setremote="git config remote.origin.fetch \"+refs/heads/*:refs/remotes/origin/*\""

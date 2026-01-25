@@ -6,7 +6,7 @@ TERM = "xterm-256color"
 size = 24
 
 [general]
-working_directory = "/Users/james/repos"
+working_directory = "/Users/james/r"
 import = [
   "themes/catppuccin_mocha.toml"
 ]
