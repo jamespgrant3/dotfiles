@@ -14,6 +14,8 @@ ln -s $HOME/r/dotfiles/master/.zprofile $HOME/.zprofile
 
 ln -s $HOME/r/dotfiles/master/.client $HOME/.client
 
+ln -s $HOME/r/dotfiles/master/.credentials $HOME/.credentials
+
 # lazygit
 mkdir -p /Users/james/.config/lazygit
 ln -s $HOME/r/dotfiles/master/.config/lazygit/config.yml $HOME/.config/lazygit/config.yml
