@@ -9,6 +9,8 @@ export PATH="$PATH:/usr/local/bin"
 export AWS_DEFAULT_REGION=us-east-1
 export AWS_DEFAULT_OUTPUT=json
 
+export REPOS_DIR="$HOME/r"
+
 # ollama
 export OLLAMA_COMPUTE=cpu
 export GGML_METAL=0
@@ -30,14 +32,17 @@ alias m="multipass"
 # alias sync="aws s3 sync '/Volumes/Seagate Backup Plus Drive/external' s3://james-external-backup"
 
 sync(){
-  rclone sync '/Volumes/Seagate Backup Plus Drive/external' external:external --exclude ".DS_Store" -v --progress
+  # rclone sync '/Volumes/Seagate Backup Plus Drive/external' cloudflare:external --exclude ".DS_Store" -v --progress
+  rclone copy '/Volumes/Seagate Backup Plus Drive/external' cloudflare:external --exclude ".DS_Store" -u -v --progress
 }
 
 syncd(){
-  rclone sync '/Volumes/Seagate Backup Plus Drive/external' external:external --exclude ".DS_Store" -v --progress --dry-run
+  # rclone sync '/Volumes/Seagate Backup Plus Drive/external' cloudflare:external --exclude ".DS_Store" -v --progress --dry-run
+  rclone copy '/Volumes/Seagate Backup Plus Drive/external' cloudflare:external --exclude ".DS_Store" -u -v --progress --dry-run
 }
 
 alias ai="claude"
+alias oc="opencode"
 alias rc="rclone" # rclone is used for cloudflare r2
 
 1pw(){

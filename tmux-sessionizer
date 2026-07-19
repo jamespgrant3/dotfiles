@@ -3,7 +3,19 @@
 if [[ $# -eq 1 ]]; then
   selected=$1
 else
-  selected=$(find ~/repos -mindepth 1 -maxdepth 1 -type d | fzf)
+  repos=$(find $REPOS_DIR -mindepth 1 -maxdepth 1 -type d)
+  selected=$(for repo in $repos; do
+    if git -C "$repo" rev-parse --git-dir > /dev/null 2>&1; then
+      worktrees=$(git -C "$repo" worktree list | awk '{print $1}')
+      if [[ $(wc -l <<< "$worktrees") -gt 1 ]]; then
+        grep -v "^$repo\$" <<< "$worktrees"
+      else
+        echo "$repo"
+      fi
+    else
+      echo "$repo"
+    fi
+  done | fzf)
 fi
 
 if [[ -z $selected ]]; then
