@@ -1,0 +1,30 @@
+layouts:
+  - id: web-app
+    setup:
+      command: make setup # optional one-off, run before the rest of the layout
+      blocking: true # if true, no other panes spawn until it finishes
+    tabs:
+      - title: code
+        panes:
+          - title: agent
+            agent: claude # started with `herdr agent start`, waits until it's ready
+            setup: true # runs setup.command first, then starts the agent
+          - title: editor
+            command: nvim # optional command to run in the pane
+            split: vertical # placed beside the agent pane
+      - title: server
+        panes:
+          - title: dev
+            command: make dev
+            env:
+              PORT: 3000 # environment for this pane's process
+          - title: shell
+            split: horizontal # stacked below the dev server
+      - title: git
+        panes:
+          - title: lazygit
+            command: lazygit
+
+workspaces:
+  - repo: ~/code/web-app # any linked worktree of this repo gets the layout
+    defaultLayout: web-app
