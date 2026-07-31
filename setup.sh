@@ -35,3 +35,11 @@ ln -s $HOME/r/dotfiles/master/.config/aerospace/aerospace.toml $HOME/.config/aer
 mkdir -p /Users/james/.config/alacritty
 ln -s $HOME/r/dotfiles/master/.config/alacritty/alacritty.toml $HOME/.config/alacritty/alacritty.toml
 ln -s $HOME/r/dotfiles/master/.config/alacritty/themes $HOME/.config/alacritty/themes
+
+#herdr
+# install herdr
+ln -s $HOME/r/dotfiles/master/.config/herdr/config.toml $HOME/.config/herdr/config.toml
+
+# install herdr-plugin-workspace-manager: https://github.com/razajamil/herdr-plugin-workspace-manager
+ln -s $HOME/r/dotfiles/master/.config/herdr/plugins/config/herdr-plugin-workspace-manager/config.yml $HOME/.config/herdr/plugins/config/herdr-plugin-workspace-manager/config.yml
+
