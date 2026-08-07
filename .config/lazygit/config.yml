@@ -64,9 +64,10 @@ gui:
   animateExplosion: true
   portraitMode: auto
 git:
-  pagers:
+  diffRenderers:
     - colorArg: always
       useConfig: false
+      type: rawGit
   commit:
     signOff: false
   merging:
@@ -228,7 +229,7 @@ keybinding:
     pasteCommits: V
     tagCommit: T
     checkoutCommit: <space>
-    resetCherryPick: <c-R>
+    # resetCherryPick: <c-R>
     copyCommitMessageToClipboard: <c-y>
     openLogMenu: <c-l>
     viewBisectOptions: b

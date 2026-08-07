@@ -30,6 +30,9 @@ alias tp="terraform plan"
 alias y="yazi"
 alias m="multipass"
 # alias sync="aws s3 sync '/Volumes/Seagate Backup Plus Drive/external' s3://james-external-backup"
+alias h="herdr"
+alias hs="herdr server stop"
+alias hw="herdr session list | grep -q 'work (attached)' && herdr session attach personal || herdr session attach work"
 
 sync(){
   # rclone sync '/Volumes/Seagate Backup Plus Drive/external' cloudflare:external --exclude ".DS_Store" -v --progress
