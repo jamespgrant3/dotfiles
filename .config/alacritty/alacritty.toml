@@ -2,8 +2,8 @@
 TERM = "xterm-256color"
 
 [font]
-size = 16
-# size = 24
+# size = 16
+size = 24
 
 [general]
 working_directory = "/Users/james/r"
@@ -20,8 +20,3 @@ save_to_clipboard = true
 [window]
 decorations = "None"
 option_as_alt = "Both"
-
-[[keyboard.bindings]]
-key = "Return"
-mods = "Shift"
-chars = "\u001B\r"
