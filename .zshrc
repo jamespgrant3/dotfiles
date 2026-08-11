@@ -1,10 +1,12 @@
+source $HOME/.zprofile
+
 export PATH="$PATH:$HOME/.rvm/bin"
 export PATH="$PATH:$HOME/.pyenv/bin"
 
-alias ts="$HOME/r/dotfiles/master/tmux-sessionizer"
+# alias ts="$HOME/r/dotfiles/master/tmux-sessionizer"
 
 # working with git worktrees doesn't always set the remote, this does
-alias setremote="git config remote.origin.fetch \"+refs/heads/*:refs/remotes/origin/*\""
+# alias setremote="git config remote.origin.fetch \"+refs/heads/*:refs/remotes/origin/*\""
 
 # use vim on the command-line
 set -o vi
@@ -17,12 +19,13 @@ export PROMPT="%~%f %% "
 alias who="aws sts get-caller-identity"
 
 alias n="nvim"
-alias tx="tmuxinator"
-alias bu="brew upgrade"
+# alias tx="tmuxinator"
+alias bu="brew upgrade -y"
 alias lg="lazygit"
+alias ld="lazydocker"
 
 # see session files saved by tmux-resurrect
-alias txr="cd $HOME/.local/share/tmux/resurrect"
+# alias txr="cd $HOME/.local/share/tmux/resurrect"
 
 # see list of used ports for pid
 alias ports="lsof -i -n -P | grep TCP"
@@ -31,14 +34,12 @@ alias ports="lsof -i -n -P | grep TCP"
 alias ds="find . -name \".DS_Store\" -delete"
 
 alias ll="ls -Alh"
-alias tr="git log --graph --pretty=oneline --abbrev-commit"
 alias ..="cd .."
 # show more history
 alias history="history 1"
 
 # reloads
 alias so="source $HOME/.zshrc"
-alias sop="source $HOME/.zprofile"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

@@ -62,7 +62,7 @@ auto_switch = false
 # Named punctuation such as minus, comma, ampersand, plus, and backtick is also accepted.
 # Most reliable direct bindings are ctrl+letter, function keys, and explicit modified chords.
 # alt+..., cmd/super, and punctuation-with-modifiers may depend on your terminal/tmux setup.
-prefix = "ctrl+f"
+prefix = "ctrl+b"
 
 # Prefix-mode actions
 # help = "prefix+?"
@@ -72,20 +72,20 @@ prefix = "ctrl+f"
 # open_notification_target = "prefix+o"
 # workspace_picker = "prefix+w"
 # goto = "prefix+g"
-# new_workspace = "prefix+shift+n"
-# new_worktree = "prefix+shift+g"
-# open_worktree = ""    # optional, unset by default
-# remove_worktree = ""  # optional, unset by default; opens confirmation
-# rename_workspace = "prefix+shift+w"
-# close_workspace = "prefix+shift+d"
+new_workspace = "prefix+shift+n"
+new_worktree = "prefix+shift+g"
+open_worktree = "prefix+shift+o"
+# remove_worktree = "prefix+shift+d"
+rename_workspace = "prefix+,"
+close_workspace = "prefix+shift+d"
 # previous_workspace = "" # optional, unset by default
 # next_workspace = ""     # optional, unset by default
 # previous_agent = ""     # optional, unset by default
 # next_agent = ""         # optional, unset by default
 # focus_agent = ""        # optional indexed binding, e.g. "prefix+alt+1..9"
 # remote_image_paste = "ctrl+v" # only active in herdr --remote; empty disables raw-key image paste
-# new_tab = "prefix+c"
-# rename_tab = "prefix+shift+t"
+new_tab = "prefix+c"
+rename_tab = "prefix+t"
 # previous_tab = "prefix+p"
 # next_tab = "prefix+n"
 # switch_tab = "prefix+1..9"
@@ -93,17 +93,17 @@ prefix = "ctrl+f"
 # close_tab = "prefix+shift+x"
 # rename_pane = "prefix+shift+p"
 # edit_scrollback = "prefix+e"
-# focus_pane_left = "prefix+h"
-# focus_pane_down = "prefix+j"
-# focus_pane_up = "prefix+k"
-# focus_pane_right = "prefix+l"
+focus_pane_left = "ctrl+h"
+focus_pane_down = "ctrl+j"
+focus_pane_up = "ctrl+k"
+focus_pane_right = "ctrl+l"
 # cycle_pane_next = "prefix+tab"
 # cycle_pane_previous = "prefix+shift+tab"
 # last_pane = ""          # optional, unset by default; bind e.g. "prefix+tab" for global back-and-forth
 # split_vertical = "prefix+v"
 # split_horizontal = "prefix+minus"
 # close_pane = "prefix+x"
-# zoom = "prefix+z"       # legacy alias: fullscreen
+zoom = "prefix+z"       # legacy alias: fullscreen
 # resize_mode = "prefix+r"
 toggle_sidebar = "prefix+b"
 
@@ -112,8 +112,8 @@ toggle_sidebar = "prefix+b"
 navigate_workspace_up = "k"
 navigate_workspace_down = "j"
 navigate_pane_left = "h"      # left arrow always focuses the pane to the left
-navigate_pane_down = "j"
-navigate_pane_up = "k"
+navigate_pane_down = "down"
+navigate_pane_up = "up"
 navigate_pane_right = "l"     # right arrow always focuses the pane to the right
 
 # Custom commands use the same binding syntax.
@@ -126,22 +126,13 @@ navigate_pane_right = "l"     # right arrow always focuses the pane to the right
 key = "prefix+alt+g"
 type = "pane"
 command = "lazygit"
-# width = "80%"
-# height = "80%"
 
-# Legacy indexed shortcut config is still parsed for compatibility.
-# Prefer switch_tab, switch_workspace, and focus_agent for new configs.
-# [keys.indexed]
-# tabs = ""       # e.g. "ctrl" makes ctrl+1..9 switch tabs directly
-# workspaces = "" # e.g. "ctrl+shift" makes ctrl+shift+1..9 switch workspaces directly
-# agents = ""     # e.g. "alt" makes alt+1..9 focus agent rows directly
-
-# [worktrees]
-# directory = "~/.herdr/worktrees"
+[worktrees]
+directory = "~/.herdr/worktrees"
 
 [ui]
 # Sidebar width (auto-scaled based on workspace names, this sets the default)
-# sidebar_width = 26
+sidebar_width = 26
 
 # Minimum sidebar width when expanded (columns)
 # sidebar_min_width = 18
@@ -153,7 +144,7 @@ command = "lazygit"
 sidebar_start_collapsed = true
 
 # Collapsed sidebar presentation: "compact" keeps the narrow status rail, "hidden" uses zero width.
-# sidebar_collapsed_mode = "compact"
+sidebar_collapsed_mode = "hidden"
 
 # Terminal width at or below which Herdr uses the mobile single-column layout.
 # Increase this for foldables, tablets, or wide phone terminals.
@@ -166,7 +157,7 @@ mouse_capture = false
 
 # Automatically copy text selected by mouse drag.
 # Set false to keep drag selection visible without copying; double-click still copies a word.
-# copy_on_select = true
+copy_on_select = true
 
 # Host cursor policy: "auto", "native", or "drawn".
 # "auto" draws Herdr's own cursor on native Windows builds and WSL to avoid ConPTY cursor flicker, and uses the native terminal cursor elsewhere.
@@ -186,27 +177,27 @@ mouse_capture = false
 # mouse_scroll_lines = 3
 
 # Ask for confirmation before closing a workspace
-# confirm_close = true
+confirm_close = true
 
 # Ask for a tab name before creating a new tab.
 # Set false to create tabs immediately with generated names.
-# prompt_new_tab_name = true
+prompt_new_tab_name = false
 
 # Ask for a workspace name before interactive creation.
 # prompt_new_workspace_name = false
 
 # Draw borders around split panes.
-# pane_borders = true
+pane_borders = true
 
 # Keep split panes visually separated instead of sharing divider borders.
-# pane_gaps = true
+pane_gaps = true
 
 # Show detected/reported agent labels in split pane borders when no manual pane name is set.
 # show_agent_labels_on_pane_borders = false
 
 # Hide the tab row when a workspace has exactly one tab.
 # New tabs can still be created with the configured keybinding.
-# hide_tab_bar_when_single_tab = false
+hide_tab_bar_when_single_tab = false
 
 # Agent panel ordering: "spaces" (grouped by space) or "priority" (attention queue).
 # "workspaces" is accepted as an alias for "spaces".
@@ -239,6 +230,7 @@ mouse_capture = false
 
 # Background notification popup delivery
 agent_panel_sort = "spaces"
+
 [ui.toast]
 # off = disable pop-up notifications
 # herdr = show in-app toasts

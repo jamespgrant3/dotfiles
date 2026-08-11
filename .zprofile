@@ -1,4 +1,4 @@
-source $HOME/r/dotfiles/master/.credentials
+# source $HOME/r/dotfiles/.credentials
 
 export PATH="$PATH:$HOME/apps"
 export PATH="$PATH:$HOME/apps/colima"
