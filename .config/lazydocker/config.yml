@@ -2,16 +2,28 @@ gui:
   scrollHeight: 2
   language: "auto" # one of 'auto' | 'en' | 'pl' | 'nl' | 'de' | 'tr'
   border: "rounded" # one of 'rounded' | 'single' | 'double' | 'hidden'
+  # --- catppuccin-mocha (inactive) ---
+  # theme:
+  #   activeBorderColor:
+  #     - "#b4befe"                    # lavender
+  #     - bold
+  #   inactiveBorderColor:
+  #     - "#a6adc8"                    # subtext0
+  #   selectedLineBgColor:
+  #     - "#313244"                    # surface0
+  #   optionsTextColor:
+  #     - "#89b4fa"                    # blue
+  # --- catppuccin-latte (active) ---
   theme:
     activeBorderColor:
-      - "#b4befe"
+      - "#7287fd"                      # lavender
       - bold
     inactiveBorderColor:
-      - "#a6adc8"
+      - "#6c6f85"                      # subtext0
     selectedLineBgColor:
-      - "#313244"
+      - "#ccd0da"                      # surface0
     optionsTextColor:
-      - "#89b4fa"
+      - "#1e66f5"                      # blue
   returnImmediately: false
   wrapMainPanel: true
   # Side panel width as a ratio of the screen's width

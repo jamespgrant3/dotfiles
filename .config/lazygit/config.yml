@@ -8,28 +8,56 @@ customCommands:
     context: commitFiles
     description: blame file at tree
 gui:
+  # --- catppuccin-mocha (inactive) ---
+  # authorColors:
+  #   "*": "#b4befe"                   # lavender
+  # theme:
+  #   activeBorderColor:
+  #     - "#b4befe"                    # lavender
+  #     - bold
+  #   inactiveBorderColor:
+  #     - "#a6adc8"                    # subtext0
+  #   optionsTextColor:
+  #     - "#89b4fa"                    # blue
+  #   selectedLineBgColor:
+  #     - "#313244"                    # surface0
+  #   cherryPickedCommitBgColor:
+  #     - "#45475a"                    # surface1
+  #   cherryPickedCommitFgColor:
+  #     - "#b4befe"                    # lavender
+  #   unstagedChangesColor:
+  #     - "#f38ba8"                    # red
+  #   defaultFgColor:
+  #     - "#cdd6f4"                    # text
+  #   searchingActiveBorderColor:
+  #     - "#f9e2af"                    # yellow
+  # --- catppuccin-latte (active) ---
   authorColors:
-    "*": "#b4befe"
+    "*": "#7287fd"                     # lavender
   theme:
     activeBorderColor:
-      - "#b4befe"
+      - "#7287fd"                      # lavender
       - bold
     inactiveBorderColor:
-      - "#a6adc8"
+      - "#6c6f85"                      # subtext0
     optionsTextColor:
-      - "#89b4fa"
+      - "#1e66f5"                      # blue
     selectedLineBgColor:
-      - "#313244"
+      - "#ccd0da"                      # surface0
     cherryPickedCommitBgColor:
-      - "#45475a"
+      - "#bcc0cc"                      # surface1
     cherryPickedCommitFgColor:
-      - "#b4befe"
+      - "#7287fd"                      # lavender
     unstagedChangesColor:
-      - "#f38ba8"
+      - "#d20f39"                      # red
     defaultFgColor:
-      - "#cdd6f4"
+      - "#4c4f69"                      # text
     searchingActiveBorderColor:
-      - "#f9e2af"
+      - "#df8e1d"                      # yellow
+    markedBaseCommitFgColor:
+      - "#4c4f69"                      # text
+    markedBaseCommitBgColor:
+      - "#df8e1d"                      # yellow
   screenMode: "full"
   scrollHeight: 2
   scrollPastBottom: true

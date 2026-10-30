@@ -4,7 +4,7 @@ TERM = "xterm-256color"
 [general]
 working_directory = "/Users/james/r"
 import = [
-  "~/.config/alacritty/themes/catppuccin_mocha.toml"
+  "~/.config/alacritty/themes/catppuccin_latte.toml"
 ]
 
 [font]
