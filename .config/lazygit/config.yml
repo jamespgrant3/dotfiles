@@ -8,56 +8,66 @@ customCommands:
     context: commitFiles
     description: blame file at tree
 gui:
-  # --- catppuccin-mocha (inactive) ---
+  # catppuccin/lazygit — latte/blue (mocha/blue commented below)
+  # https://github.com/catppuccin/lazygit
+  # --- catppuccin mocha/blue (inactive) ---
   # authorColors:
   #   "*": "#b4befe"                   # lavender
   # theme:
   #   activeBorderColor:
-  #     - "#b4befe"                    # lavender
+  #     - "#89b4fa"                    # blue
   #     - bold
   #   inactiveBorderColor:
   #     - "#a6adc8"                    # subtext0
+  #   searchingActiveBorderColor:
+  #     - "#f9e2af"                    # yellow
   #   optionsTextColor:
   #     - "#89b4fa"                    # blue
   #   selectedLineBgColor:
   #     - "#313244"                    # surface0
+  #   inactiveViewSelectedLineBgColor:
+  #     - "#6c7086"                    # overlay0
+  #   cherryPickedCommitFgColor:
+  #     - "#89b4fa"                    # blue
   #   cherryPickedCommitBgColor:
   #     - "#45475a"                    # surface1
-  #   cherryPickedCommitFgColor:
-  #     - "#b4befe"                    # lavender
+  #   markedBaseCommitFgColor:
+  #     - "#89b4fa"                    # blue
+  #   markedBaseCommitBgColor:
+  #     - "#f9e2af"                    # yellow
   #   unstagedChangesColor:
   #     - "#f38ba8"                    # red
   #   defaultFgColor:
   #     - "#cdd6f4"                    # text
-  #   searchingActiveBorderColor:
-  #     - "#f9e2af"                    # yellow
-  # --- catppuccin-latte (active) ---
+  # --- catppuccin latte/blue (active) ---
   authorColors:
     "*": "#7287fd"                     # lavender
   theme:
     activeBorderColor:
-      - "#7287fd"                      # lavender
+      - "#1e66f5"                      # blue
       - bold
     inactiveBorderColor:
       - "#6c6f85"                      # subtext0
+    searchingActiveBorderColor:
+      - "#df8e1d"                      # yellow
     optionsTextColor:
       - "#1e66f5"                      # blue
     selectedLineBgColor:
       - "#ccd0da"                      # surface0
+    inactiveViewSelectedLineBgColor:
+      - "#9ca0b0"                      # overlay0
+    cherryPickedCommitFgColor:
+      - "#1e66f5"                      # blue
     cherryPickedCommitBgColor:
       - "#bcc0cc"                      # surface1
-    cherryPickedCommitFgColor:
-      - "#7287fd"                      # lavender
+    markedBaseCommitFgColor:
+      - "#1e66f5"                      # blue
+    markedBaseCommitBgColor:
+      - "#df8e1d"                      # yellow
     unstagedChangesColor:
       - "#d20f39"                      # red
     defaultFgColor:
       - "#4c4f69"                      # text
-    searchingActiveBorderColor:
-      - "#df8e1d"                      # yellow
-    markedBaseCommitFgColor:
-      - "#4c4f69"                      # text
-    markedBaseCommitBgColor:
-      - "#df8e1d"                      # yellow
   screenMode: "full"
   scrollHeight: 2
   scrollPastBottom: true

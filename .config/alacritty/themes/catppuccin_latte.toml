@@ -1,3 +1,6 @@
+# catppuccin/alacritty — latte
+# https://github.com/catppuccin/alacritty/blob/main/catppuccin-latte.toml
+
 [colors.primary]
 background = "#eff1f5"
 foreground = "#4c4f69"
@@ -55,16 +58,6 @@ blue = "#1e66f5"
 magenta = "#ea76cb"
 cyan = "#179299"
 white = "#6c6f85"
-
-[colors.dim]
-black = "#bcc0cc"   # surface1
-red = "#d20f39"     # red
-green = "#40a02b"   # green
-yellow = "#df8e1d"  # yellow
-blue = "#1e66f5"    # blue
-magenta = "#ea76cb" # pink
-cyan = "#179299"    # teal
-white = "#5c5f77"   # subtext1
 
 [[colors.indexed_colors]]
 index = 16

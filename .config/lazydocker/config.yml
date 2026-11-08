@@ -2,10 +2,11 @@ gui:
   scrollHeight: 2
   language: "auto" # one of 'auto' | 'en' | 'pl' | 'nl' | 'de' | 'tr'
   border: "rounded" # one of 'rounded' | 'single' | 'double' | 'hidden'
-  # --- catppuccin-mocha (inactive) ---
+  # catppuccin/lazygit — latte/blue (mocha/blue commented below)
+  # --- catppuccin mocha/blue (inactive) ---
   # theme:
   #   activeBorderColor:
-  #     - "#b4befe"                    # lavender
+  #     - "#89b4fa"                    # blue
   #     - bold
   #   inactiveBorderColor:
   #     - "#a6adc8"                    # subtext0
@@ -13,10 +14,10 @@ gui:
   #     - "#313244"                    # surface0
   #   optionsTextColor:
   #     - "#89b4fa"                    # blue
-  # --- catppuccin-latte (active) ---
+  # --- catppuccin latte/blue (active) ---
   theme:
     activeBorderColor:
-      - "#7287fd"                      # lavender
+      - "#1e66f5"                      # blue
       - bold
     inactiveBorderColor:
       - "#6c6f85"                      # subtext0
